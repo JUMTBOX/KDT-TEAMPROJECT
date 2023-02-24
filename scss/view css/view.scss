@@ -1,0 +1,59 @@
+//RESET
+@import "reset2";
+
+//FONT
+@import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
+// font-family: 'Gajraj One', cursive;
+// font-family: 'Tilt Prism', cursive;
+// font-family: 'Tourney', cursive;
+
+//HEADER
+
+header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  padding: 0 7.5vw;
+  align-items: center;
+  font: bold 2rem/1 "Tilt Prism";
+  border-bottom: 1px solid #fff;
+}
+
+figure {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font: normal 1.5rem/1 "Tilt Prism";
+  img {
+    width: 100%;
+    height: 50vh;
+    object-fit: fill;
+  }
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-color: #fff;
+  div {
+    width: 100%;
+    height: 50vh;
+    display: block;
+    position: absolute;
+    transform: translateY(50vh);
+    opacity: 0;
+    // overflow-y: scroll;
+    scroll-snap-align: initial;
+  }
+}
+
+//ANIMATION
+
+// @keyframes scorllUP {
+//   0% {
+//   }
+//   100% {
+//   }
+// }
