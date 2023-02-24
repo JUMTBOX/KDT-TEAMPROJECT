@@ -37,3 +37,13 @@ $wordCount: 4;
     }
   }
 }
+
+@media screen and (max-height: 550px), (max-width: 1250px) {
+  .morpContainer {
+    font-size: 3rem;
+  }
+
+  .word {
+    top: 8vh;
+  }
+} ;

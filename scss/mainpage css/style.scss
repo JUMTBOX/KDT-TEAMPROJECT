@@ -1,0 +1,94 @@
+//MORPH
+@import "morphing";
+//RESET CSS
+@import "reset";
+//FONT
+@import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
+// font-family: 'Gajraj One', cursive;
+// font-family: 'Tilt Prism', cursive;
+// font-family: 'Tourney', cursive;
+
+$dropSpeed: 2s;
+$items: 4;
+
+nav {
+  z-index: 1;
+  position: absolute;
+  width: 50vw;
+  right: 0;
+  ul {
+    position: absolute;
+    top: 8vh;
+    right: 4vw;
+    animation: dropDown 2.5s;
+    li {
+      font: bold 3rem/15vh "Tourney";
+      letter-spacing: 2px;
+      transition: 2.5s;
+      transform-origin: right center;
+      opacity: 0;
+      animation: rotate 2s;
+      animation-fill-mode: forwards;
+
+      &:hover {
+        & {
+          a {
+            background: linear-gradient(to top, #fbf13a 10%, transparent 50%);
+          }
+        }
+      }
+    }
+  }
+}
+//VIDEO
+figure {
+  z-index: -1;
+  video {
+    width: 100vw;
+    height: 75vh;
+    opacity: 0.6;
+    object-fit: fill;
+  }
+}
+
+//ANIMATION
+
+@keyframes dropDown {
+  0% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(-80deg);
+  }
+
+  100% {
+    transform: rotateY(-6deg);
+  }
+}
+
+//MEDIA
+
+@media screen and (max-width: 1250px), (max-height: 600px) {
+  nav {
+    ul {
+      li {
+        font: bold 2rem/12vh "Tourney";
+      }
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  nav {
+    ul {
+      li {
+        font: bold 1rem/8vh "Tourney";
+      }
+    }
+  }
+}
