@@ -1,0 +1,39 @@
+$speed: 8s;
+$wordCount: 4;
+
+.morpContainer {
+  z-index: 2;
+  opacity: 0;
+  transition: 1.5s;
+  font-family: "Gajraj One", cursive;
+  font-size: 110px;
+  color: #fff;
+  filter: contrast(20) blur(1px);
+}
+
+.word {
+  position: absolute;
+  top: 10vh;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  animation: word $speed infinite ease-in-out;
+  @for $i from 0 to $wordCount {
+    &:nth-child(#{$i + 1}) {
+      animation-delay: ($speed / ($wordCount + 1) * $i) - $speed;
+    }
+  }
+
+  @keyframes word {
+    0%,
+    5%,
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+    30%,
+    80% {
+      filter: blur(1em);
+      opacity: 0;
+    }
+  }
+}

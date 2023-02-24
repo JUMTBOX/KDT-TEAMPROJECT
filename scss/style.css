@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
+.morpContainer {
+  z-index: 2;
+  opacity: 0;
+  transition: 1.5s;
+  font-family: "Gajraj One", cursive;
+  font-size: 110px;
+  color: #fff;
+  filter: contrast(20) blur(1px);
+}
+
+.word {
+  position: absolute;
+  top: 10vh;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  animation: word 8s infinite ease-in-out;
+}
+.word:nth-child(1) {
+  animation-delay: -8s;
+}
+.word:nth-child(2) {
+  animation-delay: -6.4s;
+}
+.word:nth-child(3) {
+  animation-delay: -4.8s;
+}
+.word:nth-child(4) {
+  animation-delay: -3.2s;
+}
+@keyframes word {
+  0%, 5%, 100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  30%, 80% {
+    filter: blur(1em);
+    opacity: 0;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  background-color: #0c0b0d;
+  color: #fff;
+}
+
+nav {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+}
+nav ul {
+  transform: rotate3d(0, 1, 0, -45deg) scale(1);
+  transform-origin: right center;
+  transform-style: preserve-3d;
+  animation: skrew 6s initial ease-in-out;
+  position: absolute;
+  top: 8vh;
+  right: 5vw;
+}
+nav ul li {
+  font: bold 45px/2.5 "Tourney";
+  letter-spacing: 2px;
+  transition: 1s;
+  opacity: 0;
+}
+nav ul li.nav-item {
+  opacity: 1;
+}
+nav ul li:hover.nav-item {
+  transform: scale(1.1);
+}
+nav ul li:hover.nav-item a {
+  background: linear-gradient(to top, #fbf13a 10%, transparent 50%);
+}
+
+figure {
+  z-index: -1;
+}
+figure video {
+  width: 100vw;
+  height: 75vh;
+  opacity: 0.6;
+  -o-object-fit: fill;
+     object-fit: fill;
+}/*# sourceMappingURL=style.css.map */
