@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
+.morpContainer {
+  z-index: 2;
+  opacity: 0;
+  transition: 1.5s;
+  font-family: "Gajraj One", cursive;
+  font-size: 110px;
+  color: #fff;
+  filter: contrast(20) blur(1px);
+}
+
+.word {
+  position: absolute;
+  top: 10vh;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  animation: word 8s infinite ease-in-out;
+}
+.word:nth-child(1) {
+  animation-delay: -8s;
+}
+.word:nth-child(2) {
+  animation-delay: -6.4s;
+}
+.word:nth-child(3) {
+  animation-delay: -4.8s;
+}
+.word:nth-child(4) {
+  animation-delay: -3.2s;
+}
+@keyframes word {
+  0%, 5%, 100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  30%, 80% {
+    filter: blur(1em);
+    opacity: 0;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  background-color: #000;
+}
+body header {
+  width: 100%;
+  height: 250px;
+}
+body header .logo {
+  position: absolute;
+  left: 60px;
+  top: calc(1vh + 30px);
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+body header .logo:hover {
+  color: #fff260;
+}
+body header .logo .slideup {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+body header .thema {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-160px);
+  top: calc(18vh + 30px);
+  font-size: 18px;
+  font-weight: normal;
+}
+body header .thema ul {
+  display: flex;
+}
+body header .thema ul li {
+  cursor: pointer;
+  color: #fff;
+}
+body header .thema ul li:not(:last-child) {
+  margin-right: 15px;
+}
+body header .thema ul li:hover {
+  color: #fff260;
+}
+body header .btn--prev {
+  position: absolute;
+  top: calc(8vh + 30px);
+  right: 63px;
+  border: 1px solid #fff;
+  z-index: 9999;
+  border-radius: 50%;
+}
+body header .btn--prev:hover {
+  border-radius: 50%;
+  transition: 1s;
+  border: 1px solid #fff;
+}
+body header .btn--prev i {
+  width: 100%;
+  height: 100%;
+  font-size: 36px;
+  padding: 5px;
+}
+body header .btn--prev i:hover {
+  transform: translateX(50%) scale(1);
+  opacity: 1;
+  animation: slideLeftOutRightIn 1.5s infinite forwards;
+}
+@keyframes slideLeftOutRightIn {
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0%) scale(0.75);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(50%) scale(0.75);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(0%) scale(0.75);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0%) scale(1);
+    opacity: 1;
+  }
+}
+body figure video {
+  width: 100%;
+  height: 50vh;
+  background-color: #fc0;
+}
+body #map {
+  background-color: #f00;
+  width: 100%;
+  height: 650px;
+  text-align: center;
+  font-size: 60px;
+  color: #fff;
+}/*# sourceMappingURL=drive.css.map */
