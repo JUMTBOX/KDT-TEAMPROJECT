@@ -11,12 +11,24 @@
 
 header {
   width: 100%;
-  height: 150px;
+  height: 20vh;
   display: flex;
   padding: 0 7.5vw;
   align-items: center;
-  font: bold 2rem/1 "Tilt Prism";
+  font: bold 3rem/1 "Tilt Prism";
   border-bottom: 1px solid #fff;
+  a {
+    &.right-menu {
+      position: absolute;
+      right: 3vw;
+      top: 17vh;
+      font-size: 2.5rem;
+    }
+
+    &:hover {
+      background: linear-gradient(to top, #fbf13a 10%, transparent 50%);
+    }
+  }
 }
 
 figure {
@@ -24,10 +36,10 @@ figure {
   display: flex;
   align-items: center;
   text-align: center;
-  font: normal 1.5rem/1 "Tilt Prism";
+  font: normal 2rem/1 "Tourney";
   img {
     width: 100%;
-    height: 50vh;
+    height: 30vh;
     object-fit: fill;
   }
 }
@@ -35,11 +47,11 @@ figure {
 section {
   position: relative;
   width: 100%;
-  height: 50vh;
-  background-color: #fff;
+  height: 60vh;
+  overflow-y: hidden;
   div {
     width: 100%;
-    height: 50vh;
+    height: inherit;
     display: block;
     position: absolute;
     transform: translateY(50vh);
