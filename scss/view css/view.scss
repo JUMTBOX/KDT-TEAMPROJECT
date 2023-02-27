@@ -40,10 +40,11 @@ section {
   width: 100%;
   height: 75vh;
   overflow: hidden;
-
+  transition: 1s;
+  opacity: 0;
   figure {
     width: 100%;
-    height: 45vh;
+    height: 100%;
     display: flex;
     align-items: center;
     text-align: center;
@@ -58,20 +59,32 @@ section {
   div {
     width: 100%;
     height: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     position: absolute;
     transform: translateY(50vh);
     transition: 1s;
     opacity: 0;
     text-align: center;
     font: normal 2rem/1 "Tourney";
+
     figure {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
       img {
-        width: 35%;
-        height: 30vh;
+        width: 40%;
+        height: 40%;
+        margin-bottom: 10vh;
+        box-shadow: 0 5px 10px 0 white;
       }
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 }
@@ -92,6 +105,7 @@ section.emptyground {
   background-color: #0c0b0d;
   color: white;
   &:hover {
+    cursor: pointer;
     & {
       transform: scale(1.05);
     }
