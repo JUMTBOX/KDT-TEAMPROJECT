@@ -2,22 +2,16 @@ const section = document.querySelector(".scroller-section");
 const slideSection = section.querySelectorAll("div");
 
 let pageNum = 0;
+window.addEventListener("load", () => {
+  slideSection[pageNum].style.opacity = "1";
+  slideSection[pageNum].style.transform = "translateY(0)";
+  slideSection[pageNum].style.transition = "1s";
+});
 
-function dos() {
-  if (pageNum === 1) {
-    slideSection[pageNum - 1].style.opacity = "1";
-    slideSection[pageNum - 1].style.transform = "translateY(0)";
-    slideSection[pageNum - 1].style.transition = "1s";
-  } else {
-    slideSection[pageNum - 1].style.opacity = "1";
-    slideSection[pageNum - 1].style.transform = "translateY(0)";
-    slideSection[pageNum - 1].style.transition = "1s";
-    slideSection.map((item) => {
-      item.style.opacity = "0";
-      item.style.transform = "translateY(50vh)";
-      item.style.transition = "none";
-    });
-  }
+function showUp() {
+  slideSection[pageNum].style.opacity = "1";
+  slideSection[pageNum].style.transform = "translateY(0)";
+  slideSection[pageNum].style.transition = "1s";
 }
 
 section.addEventListener("wheel", (e) => {
@@ -26,12 +20,26 @@ section.addEventListener("wheel", (e) => {
   wheel > 0 ? console.log("업스크롤") : console.log("다운스크롤");
 
   wheel > 0
-    ? pageNum < slideSection.length && pageNum >= 0
+    ? pageNum < slideSection.length - 1 && pageNum >= 0
       ? (pageNum += 1)
-      : (pageNum = 1)
-    : pageNum <= slideSection.length && pageNum > 1
+      : (pageNum = 0)
+    : pageNum <= slideSection.length - 1 && pageNum >= 1
     ? (pageNum -= 1)
-    : (pageNum = slideSection.length);
-  console.log(pageNum);
-  dos();
+    : (pageNum = slideSection.length - 1);
+
+  if (wheel > 0) {
+    slideSection.forEach((item) => {
+      item.style.opacity = "0";
+      item.style.transform = "translateY(50vh)";
+      item.style.transition = "1s";
+    });
+    showUp();
+  } else if (wheel < 0) {
+    slideSection.forEach((item) => {
+      item.style.opacity = "0";
+      item.style.transform = "translateY(50vh)";
+      item.style.transition = "1s";
+    });
+    showUp();
+  }
 });

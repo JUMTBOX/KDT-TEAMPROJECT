@@ -5,16 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>야경페이지</title>
+    <!-- FONT AWESOME -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/7090071867.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- SCSS -->
     <link rel="stylesheet" href="/scss/view css/view.css" />
+    <!-- JS -->
     <script defer src="/js/view.js"></script>
+    <script defer src="/js/commonButton.js"></script>
   </head>
   <body>
+    <!-- HEADER -->
     <header>
       <a href="/main.html"> NIGHT IN SEOUL</a>
-      <a href="#" class="right-menu">NIGHT: NIGHTSCAPE SPOT</a>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </header>
     <figure>
-      <img src="/video/남산타워화질good.jpg" alt="남산타워" />
+      <img src="/video/spot-image/남산타워화질good.jpg" alt="남산타워" />
       <article>
         <p>
           Enjoy The Night Scape <br />
@@ -22,13 +37,28 @@
         </p>
       </article>
     </figure>
-
+    <!-- CONTENTS -->
     <section class="scroller-section">
-      <div style="background-color: red">1</div>
-      <div style="background-color: blueviolet">2</div>
-      <div style="background-color: dodgerblue">3</div>
-      <div style="background-color: yellowgreen">4</div>
-      <div style="background-color: brown">5</div>
+      <div>
+        <figure>
+          <img src="/video/spot-image/서울로7017.jpeg" alt="서울로7017" />
+          <p>seoulro 7017</p>
+        </figure>
+        <figure style="flex-direction: row-reverse">
+          <img src="/video/spot-image/서울로2.jpg" alt="서울로7017" />
+          <p>...</p>
+        </figure>
+      </div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
     </section>
+    <section class="emptyground"></section>
+    <!-- BUTTON -->
+    <button id="commonUpButton">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
   </body>
 </html>
