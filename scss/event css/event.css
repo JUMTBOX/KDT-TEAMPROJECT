@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  height: 4000px;
+}
+body a {
+  text-decoration: none;
+}
+body header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+  justify-content: space-around;
+  z-index: 2;
+}
+body header .logo {
+  color: white;
+  font-size: 36px;
+}
+body header .menu a {
+  color: white;
+  margin: 0 20px;
+}
+body header .section-1 {
+  position: relative;
+}
+body header .section-1 .inner {
+  position: relative;
+}/*# sourceMappingURL=event.css.map */
