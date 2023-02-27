@@ -14,9 +14,12 @@
 
     <!-- Fontawesome -->
     <script
+      defer
       src="https://kit.fontawesome.com/52c9e129cf.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="/js/commonButton.js"></script>
+    <script defer src="/js/drive.js"></script>
   </head>
   <body>
     <!-- Header -->
@@ -38,15 +41,25 @@
     </header>
     <!-- Main Movie-->
     <figure>
-      <video src="../video/video.mp4" autoplay muted loop></video>
+      <video src="../video/drive.mp4" autoplay muted loop></video>
     </figure>
 
     <!-- Load Map -->
-    <section>
-      <div id="map">
-        <img src="../image/drive1.jpg" alt="" class="img image" />
-        <img src="../image/drive2.jpg" alt="" class="img image" />
-        <img src="../image/drive3.jpg" alt="" class="img image" />
+    <section id="two">
+      <div class="map">
+        <img src="../image/drive1.jpg" alt="" class="image image1" />
+        <img
+          src="../image/drive2.jpg"
+          alt="이미지1"
+          class="image image2"
+          style="display: none"
+        />
+        <img
+          src="../image/drive3.jpg"
+          alt="이미지1"
+          class="image image3"
+          style="display: none"
+        />
       </div>
 
       <div class="sub-btn">
@@ -55,22 +68,26 @@
           <br />
           <span>40km</span>
         </button>
-        <button class="btn btn2">
-          <span>드라이브 코스 1</span>
+        <button class="btn btn2" onclick="change()">
+          <span>드라이브 코스 2</span>
           <br />
           <span>40km</span>
         </button>
-        <button class="btn btn3">
-          <span>드라이브 코스 1</span>
+        <button class="btn btn3" onclick="change()">
+          <span>드라이브 코스 3</span>
           <br />
           <span>40km</span>
         </button>
-        <button class="btn btn4">
-          <span>드라이브 코스 1</span>
+        <button class="btn btn4" onclick="change()">
+          <span>드라이브 코스 4</span>
           <br />
           <span>40km</span>
         </button>
       </div>
     </section>
+    <!-- BUTTON -->
+    <button id="commonUpButton">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
   </body>
 </html>
