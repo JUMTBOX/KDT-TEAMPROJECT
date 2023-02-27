@@ -2,3 +2,4 @@ video/
 .sass-cache/
 *.css.map
 *.scss.map
+*.css
