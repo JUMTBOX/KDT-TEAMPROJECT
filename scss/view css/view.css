@@ -25,34 +25,46 @@ header {
   width: 100%;
   height: 20vh;
   display: flex;
+  justify-content: space-between;
   padding: 0 7.5vw;
   align-items: center;
-  font: bold 3rem/1 "Tilt Prism";
+  font: bold 3em/1 "Tilt Prism";
   border-bottom: 1px solid #fff;
+}
+header ul {
+  display: flex;
+}
+header ul li {
+  margin: 0 1vw;
+  font: bold 2rem/1 "Tilt Prism";
+}
+header a {
+  transition: 1s;
+  opacity: 0;
 }
 header a:hover {
   background: linear-gradient(to top, #fbf13a 10%, transparent 50%);
-}
-
-figure {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font: normal 2rem/1 "Tourney";
-}
-figure img {
-  width: 100%;
-  height: 30vh;
-  -o-object-fit: fill;
-     object-fit: fill;
 }
 
 section {
   position: relative;
   width: 100%;
   height: 75vh;
-  overflow-y: hidden;
+  overflow: hidden;
+}
+section figure {
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font: normal 2rem/1 "Tourney";
+}
+section figure img {
+  width: 100%;
+  height: 45vh;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 section div {
   width: 100%;
@@ -64,6 +76,7 @@ section div {
   transform: translateY(50vh);
   transition: 1s;
   opacity: 0;
+  text-align: center;
   font: normal 2rem/1 "Tourney";
 }
 section div figure img {
@@ -76,7 +89,7 @@ section.emptyground {
   height: 75vh;
 }
 
-button {
+#commonUpButton {
   position: fixed;
   right: 3vw;
   bottom: 5vh;
@@ -87,9 +100,9 @@ button {
   background-color: #0c0b0d;
   color: white;
 }
-button:hover {
+#commonUpButton:hover {
   transform: scale(1.05);
 }
-button:hover i {
+#commonUpButton:hover i {
   transform: scale(1.05);
 }/*# sourceMappingURL=view.css.map */
