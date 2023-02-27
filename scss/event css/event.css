@@ -1,31 +1,78 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0c0b0d;
+  color: #fff;
+  position: relative;
   height: 4000px;
 }
-body a {
-  text-decoration: none;
+
+ul,
+ol {
+  list-style: none;
 }
-body header {
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
   width: 100%;
-  height: 100px;
+  height: 20vh;
   display: flex;
   align-items: center;
-  position: relative;
-  padding: 0 20px;
-  justify-content: space-around;
+  font: bold 3rem/1 "Tilt Prism";
+  border-bottom: 1px solid #fff;
+}
+header .inner {
+  display: flex;
+  padding: 0 7.5vw;
   z-index: 2;
 }
-body header .logo {
-  color: white;
-  font-size: 36px;
+header .inner .menu {
+  position: absolute;
+  right: 100px;
 }
-body header .menu a {
-  color: white;
+header .inner .menu .menu__sub-menu {
+  display: flex;
+}
+header .inner .menu .menu__sub-menu li {
   margin: 0 20px;
 }
-body header .section-1 {
-  position: relative;
+header a:hover {
+  background: linear-gradient(to top, #fbf13a 10%, transparent 50%);
 }
-body header .section-1 .inner {
-  position: relative;
+
+#commonUpButton {
+  position: fixed;
+  right: 3vw;
+  bottom: 5vh;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: #0c0b0d;
+  color: white;
+}
+#commonUpButton:hover {
+  transform: scale(1.05);
+}
+#commonUpButton:hover i {
+  transform: scale(1.05);
+}
+
+.video {
+  position: absolute;
+  top: -153px;
+  z-index: 1;
+}
+.video video {
+  background-size: cover;
+  width: 100%;
 }/*# sourceMappingURL=event.css.map */

@@ -4,34 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    <!-- event css -->
-    <link rel="stylesheet" href="/scss/event css/event.css" />
-
-    <!-- Main js -->
-    <!-- <script defer src="./js/main.js"></script> -->
-
-    <!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/52c9e129cf.js" crossorigin="anonymous"></script>
+    <title>EVENT</title>
+    <!-- FONT AWESOME -->
+    <script defer src="https://kit.fontawesome.com/7090071867.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../scss/event css/event.css" />
+    <!-- JS -->
+    <script defer src="../js/event.js"></script>
+    <script defer src="../js/commonButton.js"></script>
   </head>
   <body>
+    <!-- HEADER -->
     <header>
-      <div class="logo">NIGHT IN SEOUL</div>
-      <div class="menu">
-        <a href="#">MAIN</a>
-        <a href="#">EVENT</a>
-        <a href="#">PALACE</a>
-        <a href="#">DRIVE</a>
-        <a href="#">VIEW</a>
+      <div class="inner">
+        <div class="logo">
+          <a href="/main.html">NIGHT IN SEOUL</a>
+        </div>
+        <div class="menu">
+          <ul class="menu__sub-menu">
+            <li><a href="#">EVENT</a></li>
+            <li><a href="#">PALACE</a></li>
+            <li><a href="#">VIEW</a></li>
+            <li><a href="#">DRIVE</a></li>
+          </ul>
+        </div>
       </div>
     </header>
-    <section class="section-1">
-      <div class="inner">
-        <figure class="video">
-          <video src="../video/event-bg.mp4" autoplay muted loop></video>
-        </figure>
-      </div>
+
+    <!-- SECTION-VIDEO -->
+    <section class="video">
+      <video src="../video/event-bg.mp4" autoplay muted loop></video>
     </section>
+    <!-- BUTTON -->
+    <button id="commonUpButton">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
   </body>
 </html>
