@@ -1,7 +1,9 @@
 const section = document.querySelector(".scroller-section");
-const slideSection = section.querySelectorAll("div");
+const slideSection = section.querySelectorAll(".slider");
 const headerLogo = document.querySelectorAll("a");
 const figureSection = document.querySelector(".figureSection");
+const sliderContent = section.querySelector(".slider-content");
+const instaImg = section.querySelector(".insta");
 
 //페이지 로드 후 500ms가 지난뒤 헤더의 a태그들이 나타나게 처리
 window.addEventListener("load", () => {
@@ -10,7 +12,7 @@ window.addEventListener("load", () => {
       item.style.opacity = "1";
     });
     section.style.opacity = "1";
-  }, 550);
+  }, 750);
 });
 
 //슬라이드 섹션들이 나오게 하는 역할의 함수
@@ -37,8 +39,8 @@ section.addEventListener("wheel", (e) => {
   // 옆으로 치워도 해당 섹션이 있던 공간을 잡아먹기 때문에 디스플레이 논 처리
   setTimeout(() => {
     figureSection.style.display = "none";
-    section.style.borderBottom = "1px solid #fff";
-  }, 350);
+    // section.style.borderBottom = "1px solid #fff";
+  }, 450);
 
   //휠값에 따라 슬라이드 섹션 페이지 넘버를 바꾸어줌
   wheel > 0
@@ -65,6 +67,20 @@ section.addEventListener("wheel", (e) => {
     });
     showUp();
   }
+});
+
+instaImg.addEventListener("mouseover", () => {
+  sliderContent.style.background = `radial-gradient(
+             at 20% 125%,
+             #feda78 20%,
+             #e23467 60%,
+             #ac2bb3 90%
+           )`;
+  instaImg.style.boxShadow = "0 2px 2.5px 0 black";
+});
+
+instaImg.addEventListener("mouseout", () => {
+  sliderContent.style.background = "none";
 });
 
 console.log(scrollY);
