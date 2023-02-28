@@ -6,10 +6,10 @@
 }
 
 body {
-  background-color: #0c0b0d;
   color: #fff;
   position: relative;
-  height: 4000px;
+  height: 100vh;
+  overflow: hidden;
 }
 
 ul,
@@ -24,7 +24,7 @@ a {
 
 header {
   width: 100%;
-  height: 20vh;
+  height: 100%;
   display: flex;
   align-items: center;
   font: bold 3rem/1 "Tilt Prism";
@@ -35,9 +35,14 @@ header .inner {
   padding: 0 7.5vw;
   z-index: 2;
 }
+header .inner .logo {
+  position: absolute;
+  top: 6vh;
+}
 header .inner .menu {
   position: absolute;
-  right: 100px;
+  top: 6vh;
+  right: 10vw;
 }
 header .inner .menu .menu__sub-menu {
   display: flex;
@@ -57,8 +62,9 @@ header a:hover {
   height: 2.5rem;
   border-radius: 50%;
   border: 1px solid white;
-  background-color: #0c0b0d;
+  background-color: rgb(8, 53, 53);
   color: white;
+  cursor: pointer;
 }
 #commonUpButton:hover {
   transform: scale(1.05);
@@ -69,10 +75,48 @@ header a:hover {
 
 .video {
   position: absolute;
-  top: -153px;
+  top: -140px;
   z-index: 1;
 }
 .video video {
+  display: block;
   background-size: cover;
   width: 100%;
+}
+
+.section-1 {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100vh;
+  background-color: salmon;
+  z-index: 3;
+  transition: 0.8s;
+}
+
+.section-2 {
+  position: absolute;
+  top: 200%;
+  width: 100%;
+  height: 100vh;
+  background-color: skyblue;
+  z-index: 3;
+  transition: 0.8s;
+}
+
+.section-3 {
+  position: absolute;
+  top: 300%;
+  width: 100%;
+  height: 100vh;
+  background-color: beige;
+  z-index: 3;
+  transition: 0.8s;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: black;
 }/*# sourceMappingURL=event.css.map */
