@@ -21,54 +21,58 @@ a {
   color: #fff;
 }
 
-body {
-  background-color: #000;
-}
-body header {
+header {
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  height: 20vh;
-  background-color: #000;
+  padding: 5vh 5vw;
+  z-index: 2;
+  background-color: transparent;
 }
-body header .logo {
+header .logo {
   position: absolute;
-  left: 10%;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: "Tilt Prism";
-  font-size: 2.5rem;
-  font-weight: bold;
+  font: bold 2.5rem/50px "Tilt Prism";
   color: #fff;
 }
-body header .logo:hover {
+header .logo:hover {
   color: #fff260;
 }
-body header .logo .slideup {
+header .logo .slideup {
   display: block;
-  position: relative;
+  position: absolute;
   width: 100%;
 }
-body header .thema {
-  position: absolute;
-  right: 15%;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 18px;
-  font-weight: normal;
+header .thema {
+  font: bold 1.6rem "Tilt Prism";
 }
-body header .thema ul {
+header .thema ul {
   display: flex;
 }
-body header .thema ul li {
-  cursor: pointer;
-  color: #fff;
+header .thema ul li {
+  margin: 0 20px;
 }
-body header .thema ul li:not(:last-child) {
-  margin-right: 15px;
+header .thema ul li:not(:last-child) {
+  margin-right: 20px;
 }
-body header .thema ul li:hover {
+header .thema ul li:hover {
   color: #fff260;
 }
+header figure {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100px;
+  left: 0;
+  overflow: hidden;
+}
+header figure video {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 @keyframes slideLeftOutRightIn {
   100% {
     transform: translateX(0) scale(1);
@@ -91,14 +95,16 @@ body header .thema ul li:hover {
     opacity: 1;
   }
 }
-body figure video {
-  width: 100%;
-  height: 86vh;
+#two {
+  padding: 100px 30px;
+  background-color: #0c0b0d;
+  position: relative;
 }
-body #two {
-  padding: 30px 0;
+#two h1 {
+  font-size: 34px;
+  margin-bottom: 54px;
 }
-body #two .map {
+#two .map {
   position: relative;
   width: 100%;
   height: 580px;
@@ -107,22 +113,22 @@ body #two .map {
   color: #fff;
   margin: 0 auto;
 }
-body #two .map .image {
+#two .map .image {
   position: absolute;
   top: 0;
-  width: 1090px;
+  width: 50%;
   height: 100%;
   left: 50%;
-  transform: translateX(-545px);
+  transform: translateX(-400px);
 }
-body #two .sub-btn {
+#two .sub-btn {
   display: flex;
   justify-content: space-between;
   width: 1090px;
   position: relative;
   margin: 36px auto 0;
 }
-body #two .sub-btn .btn {
+#two .sub-btn .btn {
   display: block;
   background-color: #000;
   width: 13%;
@@ -130,7 +136,10 @@ body #two .sub-btn .btn {
   cursor: pointer;
   opacity: 0.5;
 }
-body #two .sub-btn .btn::before {
+#two .sub-btn .btn:first-child {
+  opacity: 1;
+}
+#two .sub-btn .btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -138,14 +147,15 @@ body #two .sub-btn .btn::before {
   height: 3px;
   background-color: #fff;
 }
-body #two .sub-btn .btn > span {
+#two .sub-btn .btn > span {
   display: inline-block;
   color: #fff;
   font-size: 16px;
   padding: 5px;
   margin-top: 5px;
 }
-body #commonUpButton {
+
+#commonUpButton {
   position: fixed;
   right: 3vw;
   bottom: 5vh;
@@ -157,9 +167,22 @@ body #commonUpButton {
   color: white;
   cursor: pointer;
 }
-body #commonUpButton:hover {
+#commonUpButton:hover {
   transform: scale(1.05);
 }
-body #commonUpButton:hover i {
+#commonUpButton:hover i {
   transform: scale(1.05);
+}
+
+.detail {
+  position: relative;
+  height: 500px;
+}
+.detail .detail_item {
+  position: absolute;
+  width: 310px;
+  height: 310px;
+  left: 120px;
+  top: 120px;
+  transform: translateX(100px);
 }/*# sourceMappingURL=drive.css.map */
