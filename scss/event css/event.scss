@@ -13,11 +13,9 @@ header {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
   font: bold 3rem/1 "Tilt Prism";
 
   .inner {
-    display: flex;
     padding: 0 7.5vw;
     z-index: 2;
 
@@ -34,6 +32,7 @@ header {
         display: flex;
         li {
           margin: 0 20px;
+          font-size: 0.7em;
         }
       }
     }
@@ -70,7 +69,7 @@ header {
 // --------------- SECTION VIDEO ---------------------
 .video {
   position: absolute;
-  top: -140px;
+  top: -132px;
   z-index: 1;
   video {
     display: block;
@@ -84,26 +83,33 @@ header {
 .section-1 {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 3;
   transition: 0.8s;
   background-color: #0c0b0d;
-  position: absolute;
+  background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   top: 100%;
 
   .container {
     margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .line {
+    }
     .line-1,
     .line-2 {
       display: flex;
-      justify-content: center;
-      // position: absolute;
-      // top: 200px;
+      // align-items: center;
+
       .element {
-        background-color: skyblue;
+        display: flex;
+        align-items: center;
+        // background-color: salmon;
         width: 20vw;
-        height: 40vh;
+        height: 30vh;
         margin: 20px 20px;
+        overflow: hidden;
 
         .content {
           .title {
@@ -111,16 +117,66 @@ header {
             font-weight: bold;
           }
           .text {
-            margin-top: 30px;
+            font-size: 1.2em;
+            margin-top: 40px;
+            line-height: 2;
           }
         }
 
         img {
           width: 100%;
+          height: 100%;
+          object-fit: cover;
+          cursor: pointer;
+          // background-color: white;
+          border: 4px solid lightgray;
+          // border-style: groove;
         }
       }
     }
+    .line-1 > .element:first-child {
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      // background-color: skyblue;
+    }
+
+    .detailPopup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 40vw;
+      height: 60vh;
+      transform: translate(-50%, -50%);
+      // background-color: salmon;
+      visibility: hidden;
+      opacity: 0;
+      transition: 1s;
+      z-index: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
   }
+
+  .bottom-text {
+    position: relative;
+    white-space: nowrap;
+    width: 80%;
+    font-size: 2em;
+    margin: 50px 100px 0;
+    // text-align: right;
+    // background-color: salmon;
+    // overflow: hidden;
+  }
+}
+
+.show {
+  visibility: visible;
+  // opacity: 1;
 }
 
 .section-2 {
@@ -130,7 +186,6 @@ header {
   z-index: 3;
   transition: 0.8s;
   background-color: green;
-  position: absolute;
   top: 200%;
 }
 
@@ -141,7 +196,6 @@ header {
   z-index: 3;
   transition: 0.8s;
   background-color: skyblue;
-  position: absolute;
   top: 300%;
 }
 
@@ -152,6 +206,5 @@ header {
   z-index: 3;
   transition: 0.8s;
   background-color: beige;
-  position: absolute;
   top: 400%;
 }
