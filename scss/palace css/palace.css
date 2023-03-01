@@ -45,9 +45,9 @@ header ul li {
 
 figure {
   position: relative;
-  background-color: black;
+  background-color: #0c0b0d;
   width: 100%;
-  height: 700%;
+  height: 100%;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -78,9 +78,11 @@ section {
 }
 
 .palace-kb {
-  margin: 0;
-  height: 100%;
-  background: #000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 80%;
+  background-image: url("../../video/palace/background.jpg");
+  opacity: 3;
   font-family: sans-serif;
   display: relative;
   justify-content: center;
@@ -89,6 +91,7 @@ section {
 .palace-kb .container {
   display: flex;
   justify-content: center;
+  border: solid 5px rgb(159, 248, 190);
   align-items: center;
   margin: 10vmin;
   overflow: hidden;
@@ -98,11 +101,12 @@ section {
   flex: 1;
   transition: all 1s ease-in-out;
   height: 75vmin;
+  border: solid 5px rgb(154, 236, 92);
   position: relative;
 }
 .palace-kb .container .card .card__head {
-  color: black;
-  background: rgba(78, 33, 61, 0.75);
+  color: rgb(158, 32, 32);
+  background: rgb(239, 191, 227);
   padding: 0.5em;
   transform: rotate(-90deg);
   transform-origin: 0% 0%;
@@ -115,13 +119,13 @@ section {
   font-size: 1em;
   white-space: nowrap;
 }
-.palace-kb .container .card:active {
+.palace-kb .container .card:hover {
   flex-grow: 10;
 }
-.palace-kb .container .card:active img {
+.palace-kb .container .card:hover img {
   filter: grayscale(0);
 }
-.palace-kb .container .card:active .card__head {
+.palace-kb .container .card:hover .card__head {
   text-align: center;
   top: calc(100% - 2em);
   color: white;
