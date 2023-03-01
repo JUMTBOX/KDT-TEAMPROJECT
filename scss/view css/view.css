@@ -281,8 +281,14 @@ section #slider2 {
   height: inherit;
 }
 section #slider2 div {
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  height: 33%;
+  height: 50%;
+}
+section #slider2 .reverse {
+  display: flex;
+  flex-direction: row-reverse;
 }
 section section.emptyground {
   width: 100%;
