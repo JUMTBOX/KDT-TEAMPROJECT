@@ -2,12 +2,12 @@ const headerLogo = document.querySelectorAll("a");
 const section = document.querySelector(".scroller-section");
 const figureSection = document.querySelector(".figureSection");
 const slideSection = section.querySelectorAll(".slider");
-const instaBg = section.querySelector(".slider-content");
-const kakaoBg = section.querySelector(".slider-content2");
-const chatContainer = section.querySelector(".chatContainer");
-const instaImg = section.querySelector(".insta");
-const kakaoImg = section.querySelector(".kakao");
-const instaEmoge = section.querySelector(".heart");
+const instaBg = section.querySelector("#instaBg");
+const kakaoBg = section.querySelector("#kakaoBg");
+const chatContainer = section.querySelector("#chatContainer1");
+const instaImg = section.querySelector("#instaPic1");
+const kakaoImg = section.querySelector("#kakaoPic1");
+const instaEmoge = section.querySelector(".heart1");
 
 //페이지 로드 후 500ms가 지난뒤 헤더의 a태그들이 나타나게 처리
 window.addEventListener("load", () => {
@@ -97,6 +97,8 @@ let isClickExcuted = 0;
 instaImg.addEventListener(
   "click",
   () => {
+    kakaoImg.style.animation = "vibrate-2 0.25s ease 3";
+
     kakaoBg.style.opacity = "1";
     kakaoBg.style.backgroundColor = "#fef01b";
     instaBg.style.opacity = "0.5";
@@ -154,7 +156,7 @@ instaImg.addEventListener(
         "주소: 서울특별시 중구 한강대로 405<br>문의:	02-120 <br> 휴무일:	연중무휴 <br>이용시간: 24시간 개방";
       chat3.innerHTML = "서울로7017을 통해 명동,남산<br>서울역도 갈 수 있음";
       chat3.style.top = "14rem";
-    }, 1500);
+    }, 2500);
 
     kakaoImg.addEventListener(
       "click",
@@ -174,10 +176,7 @@ instaImg.addEventListener(
           chatContainer.appendChild(user2);
           let chat4 = section.querySelector(".chat4");
           chat4.style.top = "21rem";
-          chat4.innerText = "ㅇㅋ";
-          setTimeout(() => {
-            section.onwheel;
-          }, 1000);
+          chat4.innerText = "ㅇㅋ 휠 내려";
         }, 1500);
       },
       { once: true }
