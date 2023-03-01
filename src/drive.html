@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../scss/drive css/drive.css" />
 
     <!-- Main js -->
-    <!-- <script defer src="./js/main.js"></script> -->
+    <script defer src="./js/main.js"></script>
 
     <!-- Fontawesome -->
     <script
@@ -22,25 +22,19 @@
     <script defer src="/js/drive.js"></script>
   </head>
   <body>
-    <!-- Header -->
     <header>
-      <!-- Logo -->
-      <div class="logo">
-        <span class="slideup">Night In Seoul</span>
-      </div>
+      <h1><a href="#">NIGHT IN SEOUL</a></h1>
 
-      <!-- Thema -->
-      <div class="thema">
-        <ul>
-          <li>DRIVE</li>
-          <li>FESTIVAL</li>
-          <li>HOT SPOT</li>
-          <li>PLACE</li>
-        </ul>
-      </div>
+      <!-- GNB Part -->
+      <ul class="gnb">
+        <li><a href="#">DRIVE</a></li>
+        <li><a href="#">DRIVE</a></li>
+        <li><a href="#">DRIVE</a></li>
+        <li><a href="#">DRIVE</a></li>
+      </ul>
     </header>
 
-    <!-- Main Movie-->
+    <!-- Figure -->
     <figure>
       <video
         src="../video/제목 없는 동영상 - Clipchamp로 제작.mp4"
@@ -49,44 +43,65 @@
         loop
       ></video>
     </figure>
+
     <!-- Map -->
     <section id="two">
       <h1>드라이브 코스</h1>
-      <div class="map">
-        <img src="../video/banpo.gif" alt="" class="image image1" />
-        <img
-          src="../image/drive2.jpg"
-          alt="이미지1"
-          class="image image2"
-          style="display: none"
-        />
-        <img
-          src="../image/drive3.jpg"
-          alt="이미지1"
-          class="image image3"
-          style="display: none"
-        />
+      <div class="drive--cos">
+        <img src="../video/banpojpg.jpg" alt="이미지1" class="image image1" />
+        <p class="p p1" style="opacity: 1">반포 대교</p>
+        <span class="s s1" style="opacity: 1">안녕하세요</span>
+
+        <img src="../video/namsan.jpg" alt="이미지2" class="image image2" />
+        <p class="p p2" style="opacity: 0">남산 타워</p>
+        <span class="s s2" style="opacity: 0">반갑습니다</span>
+
+        <img src="../video/buk.jpg" alt="이미지3" class="image image3" />
+        <p class="p p3" style="opacity: 0">북악 스퀘어</p>
+        <span class="s s3" style="opacity: 0">반갑습니다</span>
+
+        <img src="../video/buk.jpg" alt="이미지4" class="image image4" />
+        <p class="p p4" style="opacity: 0">북악 스퀘어</p>
+        <span class="s s4" style="opacity: 0">반갑습니다</span>
+
+        <img src="../video/buk.jpg" alt="이미지5" class="image image5" />
+        <p class="p p5" style="opacity: 0">북악 스퀘어</p>
+        <span class="s s5" style="opacity: 0">반갑습니다</span>
+
+        <img src="../video/buk.jpg" alt="이미지6" class="image image6" />
+        <p class="p p6" style="opacity: 0">북악 스퀘어</p>
+        <span class="s s6" style="opacity: 0">반갑습니다</span>
       </div>
 
       <!-- Sub-btn -->
       <div class="sub-btn">
         <button class="btn btn1">
-          <span>드라이브 코스 1</span>
+          <span>드라이브 코스</span>
           <br />
-          <span>40km</span>
+          <span>반포대교</span>
         </button>
         <button class="btn btn2" onclick="change()">
-          <span>드라이브 코스 2</span>
+          <span>드라이브 코스</span>
           <br />
-          <span>40km</span>
+          <span>남산</span>
         </button>
         <button class="btn btn3" onclick="change()">
-          <span>드라이브 코스 3</span>
+          <span>드라이브 코스</span>
+          <br />
+          <span>북악 스퀘어</span>
+        </button>
+        <button class="btn btn4" onclick="change()">
+          <span>드라이브 코스</span>
           <br />
           <span>40km</span>
         </button>
-        <button class="btn btn4" onclick="change()">
-          <span>드라이브 코스 4</span>
+        <button class="btn btn5" onclick="change()">
+          <span>드라이브 코스</span>
+          <br />
+          <span>40km</span>
+        </button>
+        <button class="btn btn6" onclick="change()">
+          <span>드라이브 코스</span>
           <br />
           <span>40km</span>
         </button>
@@ -94,18 +109,18 @@
     </section>
 
     <!-- Detailed Page-->
-    <section>
+    <!-- <section>
       <div class="detail">
         <img src="../video/drive1.png" alt="" class="detail_item" />
       </div>
       <div class="detail_contents">
         <img src="" alt="" class="detail_tex" />
       </div>
-    </section>
+    </section> -->
 
     <!-- BUTTON -->
-    <button id="commonUpButton">
+    <!-- <button id="commonUpButton">
       <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    </button> -->
   </body>
 </html>
