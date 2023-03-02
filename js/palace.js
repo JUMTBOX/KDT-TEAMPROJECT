@@ -1,122 +1,66 @@
-const up = $('.nav-up');
-const down = $('.nav-down');
-let counter = 1;
-let number = $('.number');
+const sliderContainer = document.querySelector('.slider-container')
+const slideRight = document.querySelector('.right-slide')
+const slideLeft = document.querySelector('.left-slide')
+const upButton = document.querySelector('.up-button')
+const downButton = document.querySelector('.down-button')
+const slidesLength = slideRight.querySelectorAll('div').length
 
-function moveDown(currentSlide) {
-  const nextSlide = currentSlide.next();
-  const currentSlideUp = currentSlide.find('.txt');
-  const currentSlideDown = currentSlide.find('.img');
-  const nextSlideUp = nextSlide.find('.img');
-  const nextSlideDown = nextSlide.find('.txt');
-  let currentCopy = currentSlide.find('.copy'); 
-  let nextCopy = nextSlide.find('.copy'); 
-  
-  if( nextSlide.length !== 0 ) {
-    
-    counter = counter + 1;
-    
-    if( counter % 2 === 0 ) {
-      
-      TweenMax.to(number, 0.3, {x: '-100%'})
-      TweenMax.to( currentSlideUp, 0.4, { y: '-100%', delay:0.15 });
-      TweenMax.to( currentSlideDown, 0.4, { y: '100%', delay:0.15 });
-      setTimeout(function() {number.html('')},300);
-      
-    } else {
-      
-      number.html('0'+counter);
-      TweenMax.to(number, 0.3, {x: '0%', delay:1})
-      TweenMax.to( currentSlideUp, 0.4, { y: '100%', delay:0.15 });
-      TweenMax.to( currentSlideDown, 0.4, { y: '-100%', delay:0.15 });
+let activeSlideIndex = 0
+
+slideLeft.style.top = `-${(slidesLength - 1) * 100}vh`
+
+upButton.addEventListener('click', () => changeSlide('up'))
+downButton.addEventListener('click', () => changeSlide('down'))
+
+const changeSlide = (direction) => {
+    const sliderHeight = sliderContainer.clientHeight
+    if(direction === 'up') {
+        activeSlideIndex++
+        if(activeSlideIndex > slidesLength - 1) {
+            activeSlideIndex = 0
+        }
+    } else if(direction === 'down') {
+        activeSlideIndex--
+        if(activeSlideIndex < 0) {
+            activeSlideIndex = slidesLength - 1
+        }
     }
-    
-    TweenMax.to( currentCopy, 0.3, {autoAlpha: 0, delay:0.15});
-    TweenMax.to( nextCopy, 0.3, {autoAlpha: 1, delay:1});
-    TweenMax.to( nextSlideUp, 0.4, { y: '0%', delay:0.15 });
-    TweenMax.to( nextSlideDown, 0.4, { y: '0%', delay:0.15 });
-    
-    $(currentSlide).removeClass('active');
-    $(nextSlide).addClass('active');
-    
-  } 
+
+    slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`
+    slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`
 }
 
-function moveUp(currentSlide) {
-  
-  const prevSlide = currentSlide.prev();
-  const currentSlideUp = currentSlide.find('.img');
-  const currentSlideDown = currentSlide.find('.txt');
-  const prevSlideUp = prevSlide.find('.txt');
-  const prevSlideDown = prevSlide.find('.img');
-  let currentCopy = currentSlide.find('.copy');
-  let prevCopy = prevSlide.find('.copy'); 
-  
-  if( prevSlide.length !== 0 ) {
-    
-    counter = counter - 1;
-    
-    if( counter % 2 === 0 ) {
-      
-      
-      TweenMax.to(number, 0.3, {x: '-100%'});
-      TweenMax.to( currentSlideUp, 0.4, { y: '-100%', delay:0.15 });
-      TweenMax.to( currentSlideDown, 0.4, { y: '100%', delay:0.15 });
-      setTimeout(function() {number.html('')},300);
+// 창경궁
+let slideIndex = 1;
+showSlides(slideIndex);
 
-      
-    }else {
-      
-      number.html('0'+counter);
-      TweenMax.to(number, 0.3, {x: '0%', delay:1})
-      TweenMax.to( currentSlideUp, 0.4, { y: '100%', delay:0.15 });
-      TweenMax.to( currentSlideDown, 0.4, { y: '-100%', delay:0.15 });
-    }
-    
-    TweenMax.to( currentCopy, 0.3, {autoAlpha: 0, delay:0.15});
-    TweenMax.to( prevCopy, 0.3, {autoAlpha: 1, delay:1});
-    TweenMax.to( prevSlideUp, 0.4, { y: '0%', delay:0.15 });
-    TweenMax.to( prevSlideDown, 0.4, { y: '0%', delay:0.15 });
-    
-    $(currentSlide).removeClass('active');
-    $(prevSlide).addClass('active');
-    
-  }
-  
+// Next/previous 
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-function hideNav() {
-  
-  if( counter == $('.slide').length) {    
-    TweenMax.to($('.nav-down'),0.5, {autoAlpha: 0, delay:0.5} );
-  }else {
-     TweenMax.to($('.nav-down'),0.5, {autoAlpha: 1, delay:0.5} );
-  }
-  if( counter === 1) {    
-    TweenMax.to($('.nav-up'),0.5, {autoAlpha: 0, delay:0.5} );
-  }else {
-     TweenMax.to($('.nav-up'),0.5, {autoAlpha: 1, delay:0.5} );
-  }
-  
+// Thumbnail image 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-
-down.on('click', function() {
-  
-  const currentSlide = $('.active');
-  moveDown(currentSlide); 
-  hideNav();
-  
-});
-
-up.on('click', function() {
-  
-  const currentSlide = $('.active');
-  moveUp(currentSlide);
-  hideNav();
-
-});
-
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo-cursor");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace("active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].classList.add("active");
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
 
  
 

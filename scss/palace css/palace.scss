@@ -35,9 +35,9 @@ header {
 
 figure {
   position: relative;
-  background-color: black;
+  background-color:#0c0b0d;
   width: 100%;
-  height: 700%;
+  height: 100%;
   top: 0;  //위랑 왼쪽에 안튀어나가게
   left: 0;
   overflow: hidden;
@@ -71,9 +71,11 @@ section {
 
 //경복궁
 .palace-kb {
-  margin: 0;
-  height: 100%;
-  background: #000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 700px;
+  background-color: #000;
+  opacity: 3;
   font-family: sans-serif;
   display: relative;
   justify-content: center;
@@ -82,19 +84,22 @@ section {
 .container {
   display: flex;
   justify-content: center;
+  border: solid 5px rgb(159, 248, 190);
   align-items: center;
   margin: 10vmin;
+  margin-left: 200px;
   overflow: hidden;
   transform: skew(5deg);
-
+  
   .card {
     flex: 1;
     transition: all 1s ease-in-out;
     height: 75vmin;
+    border: solid 5px rgb(154, 236, 92);
     position: relative;
     .card__head {
-      color: black;
-      background: rgba(78, 33, 61, 0.75);
+      color: rgb(158, 32, 32);
+      background: rgb(239, 191, 227);
       padding: 0.5em;
       transform: rotate(-90deg);
       transform-origin: 0% 0%;
@@ -108,7 +113,7 @@ section {
       white-space: nowrap;
     }
 
-    &:active { //hover?
+    &:hover { 
       flex-grow: 10;
       img {
         filter: grayscale(0);
@@ -136,7 +141,200 @@ section {
 }
 }
 
-//덕수궁
+// 덕수궁
+.palace-ds {
+  position: relative;
+  height: 500px;
+  margin-bottom: 300px;
+
+.slider-container {
+  position: absolute;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+
+  .left-slide {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+
+  .item1, 
+  .item2,
+  .item3,
+  .item4 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+
+  .item1 {
+    background-color: #FD3555;
+  }
+  .item2 {
+    background-color: #2A86BA;
+  }
+  .item3 {
+    background-color: #252E33;
+ }
+  .item4 {
+    background-color: #FFB866;
+  }
+      
+  h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+  }
+}
+
+
+.right-slide {
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 35%;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+  background-color: #FD3555;
+
+
+  .item1,
+  .item2,
+  .item3,
+  .item4 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  }
+
+  .item1 {
+    background-image: url('../../video/palace/ds-junggwan.jpg');
+  }
+  .item2 {
+    background-image: url('../../video/palace/ds-kyungwoonham.jpg');
+  }
+  .item3 {
+    background-image: url('../../video/palace/ds-seokjo.jpg');
+  }
+  .item4 {
+    background-image: url('../../video/palace/ds-seokuh.jpg');
+  }
+
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
+
+  &:hover {
+    color: #222;
+  }
+  
+  &:focus {
+    outline: none;
+  }
+}
+  .action-buttons {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+
+    .down-button {
+      transform: translateX(-100%);
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    .up-button {
+      transform: translateY(-100%);
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
+}
+
+
+// 창경궁
+.container {
+  position: relative;
+  width: 100%;
+  height: 70%;
+
+  .mySlides {
+    display: none;
+    
+  }
+
+  .prev,
+  .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  }
+
+  .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  }
+
+
+  .prev:hover,
+  .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+  }
+
+  .row {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+      }
+    }
+    .column {
+        float: left;
+        width: 16.66%;
+    }
+        .demo-cursor {
+          opacity: 0.6;
+        }
+        
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }   
+  }
+  
+
 
 #commonUpButton {
   position: fixed;
