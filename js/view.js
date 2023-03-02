@@ -184,4 +184,14 @@ instaImg.addEventListener(
   { once: true }
 );
 
-// Slider2
+// Slider3
+
+//로더 적용..
+const slider3 = section.querySelector("#slider3");
+const loader = section.querySelector(".loader");
+
+slider3.addEventListener("mouseover", () => {
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 1000);
+});
