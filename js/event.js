@@ -77,21 +77,24 @@ addEventListener("mousewheel", (e) => {
 //   }
 // });
 
-let detailPopup = document.querySelector(".detailPopup");
-let elements = document.querySelectorAll("[id^='sec-1-el-']");
+// ------------------- SECTION-1 --------------------------------------------
+
+const detailPopup = document.querySelector(".detailPopup");
+const elements = document.querySelectorAll("[id^='sec-1-el-']");
 
 for (let i = 0; i < elements.length; i++) {
   elements[i].addEventListener("click", function () {
-    let imagePath = `../video/event/서대문_0${i + 1}.jpg`;
-    detailPopup.innerHTML = `<img src="${imagePath}" alt="" />`;
+    let imagePath = `../video/event/서대문_0${i + 1}_확대.jpg`;
+    detailPopup.innerHTML = `<img src="${imagePath}" alt=""/><i class="fa-regular fa-circle-xmark"></i>`;
     detailPopup.style.visibility = "visible";
     detailPopup.style.opacity = "1";
+    // detailPopup.style.transition = "1s";
   });
 }
-
+// detailPopup 닫기
 document.addEventListener("click", function (e) {
-  console.log(e.target);
-  if (!e.target.closest(".detailPopup") && !e.target.closest("[id^='sec-1-el-']")) {
+  // detailPopup 창과 img 외 부분을 클릭하거나, close 아이콘을 클릭할 때
+  if ((!e.target.closest(".detailPopup") && !e.target.closest("[id^='sec-1-el-']")) || e.target.closest(".fa-regular")) {
     detailPopup.style.visibility = "hidden";
     detailPopup.style.opacity = "0";
   }
@@ -110,3 +113,5 @@ setInterval(() => {
     x = containerWidth;
   }
 }, 10); // 0.01 초 마다 왼쪽으로 이동
+
+// -----------------------------------------------------------------------------------
