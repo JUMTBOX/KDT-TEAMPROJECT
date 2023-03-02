@@ -91,7 +91,7 @@ figure video {
 #two {
   position: relative;
   width: 100%;
-  height: 150vh;
+  height: 120vh;
   padding: 50px;
   background-color: #0c0b0d;
   margin-top: 80vh;
@@ -123,20 +123,29 @@ figure video {
 #two .drive--cos .image1 {
   z-index: 10;
 }
-#two .drive--cos p {
+#two .drive--cos .image5 {
+  z-index: 5;
+}
+#two .drive--cos .drive {
   position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  padding: 1vh 1vw;
+  text-align: left;
+}
+#two .drive--cos .drive p {
   width: 280px;
   height: 50px;
-  top: 5%;
-  right: 30vw;
   color: #fff;
   font: bold 48px/50px "Cafe24Ssurround";
+  margin-bottom: 24px;
 }
-#two .drive--cos span {
-  position: absolute;
-  top: 18vh;
-  right: 34vw;
-  font: normal 36px/1 "Cafe24Ssurround";
+#two .drive--cos .drive span {
+  display: inline-block;
+  width: 100%;
+  font: normal 24px "Cafe24Ssurround";
+  margin-bottom: 24px;
 }
 #two .sub-btn {
   display: flex;
