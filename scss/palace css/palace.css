@@ -80,8 +80,8 @@ section {
 .palace-kb {
   margin-top: 20px;
   margin-bottom: 20px;
-  height: 80%;
-  background-image: url("../../video/palace/background.jpg");
+  height: 700px;
+  background-color: #000;
   opacity: 3;
   font-family: sans-serif;
   display: relative;
@@ -94,6 +94,7 @@ section {
   border: solid 5px rgb(159, 248, 190);
   align-items: center;
   margin: 10vmin;
+  margin-left: 200px;
   overflow: hidden;
   transform: skew(5deg);
 }
@@ -145,13 +146,18 @@ section {
   margin-right: 1em;
 }
 
-.slider-container {
+.palace-ds {
+  position: relative;
+  height: 500px;
+  margin-bottom: 300px;
+}
+.palace-ds .slider-container {
   position: absolute;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
 }
-.slider-container .left-slide {
+.palace-ds .slider-container .left-slide {
   height: 100%;
   width: 35%;
   position: absolute;
@@ -159,10 +165,10 @@ section {
   left: 0;
   transition: transform 0.5s ease-in-out;
 }
-.slider-container .left-slide .item1,
-.slider-container .left-slide .item2,
-.slider-container .left-slide .item3,
-.slider-container .left-slide .item4 {
+.palace-ds .slider-container .left-slide .item1,
+.palace-ds .slider-container .left-slide .item2,
+.palace-ds .slider-container .left-slide .item3,
+.palace-ds .slider-container .left-slide .item4 {
   height: 100%;
   width: 100%;
   display: flex;
@@ -171,55 +177,55 @@ section {
   justify-content: center;
   color: #fff;
 }
-.slider-container .left-slide .item1 {
+.palace-ds .slider-container .left-slide .item1 {
   background-color: #FD3555;
 }
-.slider-container .left-slide .item2 {
+.palace-ds .slider-container .left-slide .item2 {
   background-color: #2A86BA;
 }
-.slider-container .left-slide .item3 {
+.palace-ds .slider-container .left-slide .item3 {
   background-color: #252E33;
 }
-.slider-container .left-slide .item4 {
+.palace-ds .slider-container .left-slide .item4 {
   background-color: #FFB866;
 }
-.slider-container .left-slide h1 {
+.palace-ds .slider-container .left-slide h1 {
   font-size: 40px;
   margin-bottom: 10px;
   margin-top: -30px;
 }
-.slider-container .right-slide {
+.palace-ds .slider-container .right-slide {
   height: 100%;
   position: absolute;
   top: 0%;
   left: 35%;
-  width: 65%;
+  width: 100%;
   transition: transform 0.5s ease-in-out;
   background-color: #FD3555;
 }
-.slider-container .right-slide .item1,
-.slider-container .right-slide .item2,
-.slider-container .right-slide .item3,
-.slider-container .right-slide .item4 {
+.palace-ds .slider-container .right-slide .item1,
+.palace-ds .slider-container .right-slide .item2,
+.palace-ds .slider-container .right-slide .item3,
+.palace-ds .slider-container .right-slide .item4 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   height: 100%;
   width: 100%;
 }
-.slider-container .right-slide .item1 {
+.palace-ds .slider-container .right-slide .item1 {
   background-image: url("../../video/palace/ds-junggwan.jpg");
 }
-.slider-container .right-slide .item2 {
+.palace-ds .slider-container .right-slide .item2 {
   background-image: url("../../video/palace/ds-kyungwoonham.jpg");
 }
-.slider-container .right-slide .item3 {
+.palace-ds .slider-container .right-slide .item3 {
   background-image: url("../../video/palace/ds-seokjo.jpg");
 }
-.slider-container .right-slide .item4 {
+.palace-ds .slider-container .right-slide .item4 {
   background-image: url("../../video/palace/ds-seokuh.jpg");
 }
-.slider-container button {
+.palace-ds .slider-container button {
   background-color: #fff;
   border: none;
   color: #aaa;
@@ -227,24 +233,24 @@ section {
   font-size: 16px;
   padding: 15px;
 }
-.slider-container button:hover {
+.palace-ds .slider-container button:hover {
   color: #222;
 }
-.slider-container button:focus {
+.palace-ds .slider-container button:focus {
   outline: none;
 }
-.slider-container .action-buttons {
+.palace-ds .slider-container .action-buttons {
   position: absolute;
   left: 35%;
   top: 50%;
   z-index: 100;
 }
-.slider-container .action-buttons .down-button {
+.palace-ds .slider-container .action-buttons .down-button {
   transform: translateX(-100%);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.slider-container .action-buttons .up-button {
+.palace-ds .slider-container .action-buttons .up-button {
   transform: translateY(-100%);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -252,16 +258,11 @@ section {
 
 .container {
   position: relative;
+  width: 100%;
+  height: 70%;
 }
 .container .mySlides {
   display: none;
-}
-.container .mySlides .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
 }
 .container .prev,
 .container .next {
