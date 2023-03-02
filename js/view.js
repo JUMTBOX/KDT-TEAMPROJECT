@@ -28,7 +28,6 @@ function showUp() {
 }
 
 section.addEventListener("wheel", (e) => {
-  //섹션에 휠 이벤트 발생시 디폴트 이벤트를 방지(윈도우 스크롤)
   e.preventDefault();
 
   let wheel = e.wheelDeltaY;

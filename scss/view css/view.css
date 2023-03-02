@@ -279,6 +279,7 @@ section #slider2 {
   flex-direction: column;
   width: 100%;
   height: inherit;
+  background: linear-gradient(to left, #141e30, #243b55, transparent 90%);
 }
 section #slider2 .correct {
   position: relative;
@@ -293,11 +294,12 @@ section #slider2 .correct .correct-content {
   perspective-origin: right;
 }
 section #slider2 .correct .correct-content img {
-  width: 22%;
+  width: 20%;
   height: 100%;
   opacity: 0.8;
   margin: 1rem;
   border-radius: 15px;
+  border: 3px solid #0eff7a;
   -o-object-fit: cover;
      object-fit: cover;
   box-shadow: 0 4px 5px 0 black;
@@ -306,7 +308,6 @@ section #slider2 .correct .correct-content img {
 section #slider2 .correct .descript {
   position: absolute;
   z-index: -1;
-  background: linear-gradient(to left, #4568dc, #b06ab3, transparent 90%);
   height: 100%;
   width: 100%;
   text-align: center;
@@ -329,6 +330,7 @@ section #slider2 .reverse .reverse-content img {
   opacity: 0.9;
   margin: 1rem;
   border-radius: 15px;
+  border: 3px solid #0eff7a;
   -o-object-fit: cover;
      object-fit: cover;
   box-shadow: 0 4px 5px 0 black;
