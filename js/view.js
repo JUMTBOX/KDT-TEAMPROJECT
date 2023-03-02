@@ -54,7 +54,7 @@ section.addEventListener("wheel", (e) => {
     : pageNum <= slideSection.length - 1 && pageNum >= 1
     ? (pageNum -= 1)
     : (pageNum = slideSection.length - 1);
-
+  console.log(pageNum);
   //업스크롤 다운스크롤에 따라 슬라이드 섹션 페이지 이동 처리
   if (wheel > 0) {
     slideSection.forEach((item) => {
@@ -156,7 +156,7 @@ instaImg.addEventListener(
         "주소: 서울특별시 중구 한강대로 405<br>문의:	02-120 <br> 휴무일:	연중무휴 <br>이용시간: 24시간 개방";
       chat3.innerHTML = "서울로7017을 통해 명동,남산<br>서울역도 갈 수 있음";
       chat3.style.top = "14rem";
-    }, 2500);
+    }, 2000);
 
     kakaoImg.addEventListener(
       "click",
@@ -184,3 +184,5 @@ instaImg.addEventListener(
   },
   { once: true }
 );
+
+// Slider2

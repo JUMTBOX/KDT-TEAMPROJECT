@@ -280,15 +280,70 @@ section #slider2 {
   width: 100%;
   height: inherit;
 }
-section #slider2 div {
+section #slider2 .correct {
+  position: relative;
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 100%;
   height: 50%;
 }
+section #slider2 .correct .correct-content {
+  perspective: 400px;
+  perspective-origin: right;
+}
+section #slider2 .correct .correct-content img {
+  width: 22%;
+  height: 100%;
+  opacity: 0.8;
+  margin: 1rem;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 4px 5px 0 black;
+  transform: rotateY(12deg) translate(100px, 70px) rotatez(-3deg);
+}
+section #slider2 .correct .descript {
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(to left, #4568dc, #b06ab3, transparent 90%);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
 section #slider2 .reverse {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+section #slider2 .reverse .reverse-content {
+  position: relative;
   display: flex;
   flex-direction: row-reverse;
+  perspective: 500px;
+  z-index: 1;
+}
+section #slider2 .reverse .reverse-content img {
+  width: 25%;
+  height: 100%;
+  opacity: 0.9;
+  margin: 1rem;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 4px 5px 0 black;
+  transform: rotateY(-12deg) translate(-80px, -40px) rotatez(3deg);
+}
+section #slider2 .reverse .arti {
+  width: 100%;
+  height: 100%;
+  bottom: 20%;
+  position: absolute;
+  z-index: -2;
+}
+section #slide3 {
+  display: flex;
+  flex-direction: row;
 }
 section section.emptyground {
   width: 100%;
