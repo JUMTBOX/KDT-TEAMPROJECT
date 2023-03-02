@@ -21,6 +21,7 @@ nav {
     top: 8vh;
     right: 4vw;
     animation: dropDown 2.5s;
+    // perspective: 500px;
     li {
       font: bold 3rem/15vh "Tourney";
       letter-spacing: 2px;
@@ -29,7 +30,7 @@ nav {
       opacity: 0;
       animation: rotate 2s;
       animation-fill-mode: forwards;
-
+      // transform: rotateY(-12deg) translate(-50px, -30px) rotatez(3deg);
       &:hover {
         & {
           a {
