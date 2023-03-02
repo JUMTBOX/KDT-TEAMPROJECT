@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
 * {
   margin: 0;
@@ -21,6 +22,17 @@ a {
   color: #fff;
 }
 
+@font-face {
+  font-family: "Druk Wide Web Super";
+  src: url("http://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.eot"); /* IE9*/
+  src: url("http://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.woff2") format("woff2"), url("http://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.woff") format("woff"), url("http://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.svg#Druk Wide Web Super") format("svg"); /* iOS 4.1- */
+}
+@font-face {
+  font-family: "양진체";
+  src: url("https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 header {
   width: 100%;
   height: 20vh;
@@ -62,14 +74,22 @@ figure video {
 }
 figure .text {
   position: absolute;
-  right: 6vw;
-  top: 40%;
+  right: 5.5vw;
+  top: 25%;
   transform: translateY(-50%);
 }
 figure .text p {
-  font: normal 7vw/1 "Tourney";
+  font: normal 6vw/1 "Druk Wide Web Super";
   color: rgba(255, 129, 192, 0.892);
-  text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+  text-shadow: -2px 0 #400bee, 0 2px #400bee, 2px 0 #400bee, 0 -2px #400bee;
+}
+figure .text:hover {
+  transition: 0.5s;
+}
+figure .text:hover p {
+  background: linear-gradient(to top, #473afb 1%, transparent 10%);
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(234, 181, 232);
 }
 
 section {
@@ -77,37 +97,56 @@ section {
   height: 1000px;
 }
 
+.mq1,
+.mq2 {
+  width: 100%;
+  overflow: hidden;
+  transform: rotateY(15deg) translate(-50px, -30px) rotatez(2deg);
+}
+
+.mq1 {
+  background-color: rgb(137, 137, 133);
+  opacity: 0.5;
+  color: #080cf3;
+  padding-top: 2px;
+}
+
+.mq2 {
+  color: #f71818;
+}
+
 .palace-kb {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  position: relative;
   height: 700px;
-  background-color: #000;
-  opacity: 3;
-  font-family: sans-serif;
-  display: relative;
+  margin-bottom: 150px;
+  padding-top: 30px;
+  background-color: #030101;
+  font-family: "양진체";
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .palace-kb .container {
   display: flex;
   justify-content: center;
-  border: solid 5px rgb(159, 248, 190);
+  width: 1400px;
+  border: solid 10px rgb(23, 38, 204);
   align-items: center;
-  margin: 10vmin;
-  margin-left: 200px;
-  overflow: hidden;
+  top: 10%;
+  margin-left: 90px;
   transform: skew(5deg);
 }
 .palace-kb .container .card {
   flex: 1;
   transition: all 1s ease-in-out;
-  height: 75vmin;
-  border: solid 5px rgb(154, 236, 92);
+  height: 70vmin;
+  border: solid 3px rgb(140, 240, 103);
   position: relative;
 }
 .palace-kb .container .card .card__head {
-  color: rgb(158, 32, 32);
-  background: rgb(239, 191, 227);
+  color: rgb(245, 245, 4);
+  background: rgb(171, 132, 158);
+  opacity: 0.8;
   padding: 0.5em;
   transform: rotate(-90deg);
   transform-origin: 0% 0%;
@@ -118,7 +157,6 @@ section {
   bottom: 0;
   left: 0;
   font-size: 1em;
-  white-space: nowrap;
 }
 .palace-kb .container .card:hover {
   flex-grow: 10;
@@ -148,13 +186,16 @@ section {
 
 .palace-ds {
   position: relative;
-  height: 500px;
-  margin-bottom: 300px;
+  width: 1200px;
+  height: 100vh;
+  top: 0%;
+  margin-bottom: 200px;
+  left: 50px;
 }
 .palace-ds .slider-container {
   position: absolute;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 .palace-ds .slider-container .left-slide {
@@ -191,6 +232,7 @@ section {
 }
 .palace-ds .slider-container .left-slide h1 {
   font-size: 40px;
+  font-family: "양진체";
   margin-bottom: 10px;
   margin-top: -30px;
 }
@@ -201,7 +243,6 @@ section {
   left: 35%;
   width: 100%;
   transition: transform 0.5s ease-in-out;
-  background-color: #FD3555;
 }
 .palace-ds .slider-container .right-slide .item1,
 .palace-ds .slider-container .right-slide .item2,
@@ -241,7 +282,7 @@ section {
 }
 .palace-ds .slider-container .action-buttons {
   position: absolute;
-  left: 35%;
+  left: 33%;
   top: 50%;
   z-index: 100;
 }
@@ -257,7 +298,8 @@ section {
 }
 
 .container {
-  position: relative;
+  position: absolute;
+  top: 80%;
   width: 100%;
   height: 70%;
 }
