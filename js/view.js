@@ -28,7 +28,6 @@ function showUp() {
 }
 
 section.addEventListener("wheel", (e) => {
-  //섹션에 휠 이벤트 발생시 디폴트 이벤트를 방지(윈도우 스크롤)
   e.preventDefault();
 
   let wheel = e.wheelDeltaY;
@@ -185,4 +184,18 @@ instaImg.addEventListener(
   { once: true }
 );
 
-// Slider2
+// Slider3
+
+//로더 적용..
+const slider3 = section.querySelector("#slider3");
+const loader = section.querySelector(".loader");
+
+slider3.addEventListener(
+  "mouseover",
+  () => {
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 1000);
+  },
+  { once: true }
+);

@@ -2,19 +2,20 @@ $speed: 8s;
 $wordCount: 4;
 
 .morpContainer {
-  z-index: 2;
+  z-index: -2;
   opacity: 0;
   transition: 1.5s;
   font-family: "Gajraj One", cursive;
-  font-size: 110px;
+  font-size: 80px;
   color: #fff;
   filter: contrast(20) blur(1px);
 }
 
 .word {
+  line-height: 4.5rem;
   position: absolute;
-  top: 10vh;
-  left: 35%;
+  top: 30vh;
+  left: 15%;
   transform: translate(-50%, -50%);
   animation: word $speed infinite ease-in-out;
   @for $i from 0 to $wordCount {

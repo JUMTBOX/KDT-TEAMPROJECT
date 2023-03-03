@@ -1,11 +1,31 @@
 //RESET
 @import "reset2";
-
+//IMPORT View2
+@import "view2";
 //FONT
 @import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
 // font-family: 'Gajraj One', cursive;
 // font-family: 'Tilt Prism', cursive;
 // font-family: 'Tourney', cursive;
+
+@font-face {
+  font-family: "Druk Wide Web Super";
+  src: url("http://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.eot"); /* IE9*/
+  src: url("http://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("http://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.woff2")
+      format("woff2"),
+    /* chrome firefox */
+      url("http://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.woff")
+      format("woff"),
+    /* chrome firefox */
+      url("http://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.ttf")
+      format("truetype"),
+    /* chrome firefox opera Safari, Android, iOS 4.2+*/
+      url("http://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.svg#Druk Wide Web Super")
+      format("svg"); /* iOS 4.1- */
+}
 
 //HEADER
 
@@ -16,20 +36,20 @@ header {
   justify-content: space-between;
   padding: 0 7.5vw;
   align-items: center;
-  font: bold 3em/1 "Tilt Prism";
   ul {
     display: flex;
     li {
-      margin: 0 1vw;
-      font: bold 2rem/1 "Tilt Prism";
+      margin: 1vw;
+      font-size: 2rem;
     }
   }
   a {
     transition: color 0.2s, background-color 0.2s ease-in;
     opacity: 0;
     position: relative;
+    line-height: 2rem;
     letter-spacing: 1px;
-
+    font: bold 2rem/1 "Tilt Prism";
     &::before {
       content: "";
       display: block;
@@ -52,6 +72,10 @@ header {
       background: linear-gradient(to top, #fbf13a 10%, transparent 50%);
     }
   }
+
+  #headerLogo {
+    font-size: 3rem;
+  }
 }
 
 section {
@@ -67,6 +91,11 @@ section {
     flex-direction: column;
     justify-content: center;
   }
+  .figureSection {
+    color: transparent;
+    -webkit-text-stroke: 2px yellow;
+    font: normal 2rem/3rem "Druk Wide Web Super";
+  }
 
   figure {
     width: 100%;
@@ -74,7 +103,6 @@ section {
     display: flex;
     align-items: center;
     text-align: center;
-    font: normal 2rem/1 "Tourney";
     img {
       width: 100%;
       height: 45vh;
@@ -108,6 +136,7 @@ section {
         height: 80%;
         border-radius: 1rem;
         background-color: #fff;
+        border: 1px solid black;
         box-shadow: 0 5px 13px 0 #b5b5a6;
         &:hover {
           cursor: pointer;
@@ -221,10 +250,8 @@ section {
             width: max-content;
             height: 2rem;
             font-size: 13px;
-            // letter-spacing: 0.5px;
             text-align: center;
             left: 3rem;
-            // top: 7rem;
             background-color: white;
             border-radius: 10px;
             &::before {
@@ -243,7 +270,6 @@ section {
             width: max-content;
             height: fit-content;
             font-size: 13px;
-            // letter-spacing: 0.5px;
             text-align: left;
             left: 3rem;
             background-color: white;
@@ -257,7 +283,6 @@ section {
             padding: 0.5rem;
             height: 2rem;
             font-size: 13px;
-            // letter-spacing: 0.5px;
             text-align: center;
             background-color: #fef01b;
             border-radius: 10px;
@@ -281,35 +306,77 @@ section {
     flex-direction: column;
     width: 100%;
     height: inherit;
-
+    background: radial-gradient(
+      at 20% 125%,
+      #feda78 20%,
+      #e23467 60%,
+      #ac2bb3 90%
+    );
     .correct {
       position: relative;
       display: flex;
       flex-direction: row;
       align-items: center;
+      padding-left: 10rem;
       width: 100%;
       height: 50%;
+      perspective: 500px;
+      perspective-origin: right;
       .correct-content {
-        perspective: 400px;
-        perspective-origin: right;
+        opacity: 0.85;
+        width: 11vw;
+        height: 150%;
+        border-radius: 15px;
+        border: 2px solid #36255c;
+        box-shadow: 0 5px 10px 0 black;
+        background-color: white;
+        transform: rotateY(12deg) translate(100px, 80px) rotatez(-3deg);
+        .emoge2 {
+          font-size: 0.9rem;
+          letter-spacing: 5px;
+          color: black;
+          position: absolute;
+          bottom: 6rem;
+          left: -3rem;
+          width: 100%;
+          height: 3rem;
+          display: flex;
+          flex-direction: row;
+        }
         img {
-          width: 22%;
+          width: 100%;
           height: 100%;
-          opacity: 0.8;
-          margin: 1rem;
-          border-radius: 15px;
-          object-fit: cover;
-          box-shadow: 0 4px 5px 0 black;
-          transform: rotateY(12deg) translate(100px, 70px) rotatez(-3deg);
+          opacity: 0.9;
+          object-fit: contain;
+        }
+        .homebtn {
+          position: absolute;
+          left: 43%;
+          top: 90%;
+          width: 1.5rem;
+          height: 2rem;
+          background-color: white;
+          box-shadow: inset 0 1px 2px 0 black;
+          border-radius: 50%;
         }
       }
       .descript {
+        font-family: "Druk Wide Web Super";
+        font-size: 10rem;
+        letter-spacing: 2rem;
+        color: transparent;
+        -webkit-text-stroke: 5px black;
         position: absolute;
+        top: 50%;
+        left: -1%;
         z-index: -1;
-        background: linear-gradient(to left, #4568dc, #b06ab3, transparent 90%);
         height: 100%;
         width: 100%;
         text-align: center;
+        &:hover {
+          color: yellow;
+          cursor: pointer;
+        }
       }
     }
 
@@ -317,41 +384,153 @@ section {
       position: relative;
       width: 100%;
       height: 50%;
+      perspective: 500px;
       .reverse-content {
-        position: relative;
+        position: absolute;
+        opacity: 0.9;
+        right: 0;
+        bottom: 5%;
+        height: 165%;
+        width: 26%;
+        border-radius: 15px;
+        border: 2px solid #fff93d;
+        background-color: white;
+        box-shadow: 0 4px 5px 0 black;
         display: flex;
-        flex-direction: row-reverse;
-        perspective: 500px;
+        align-items: flex-end;
+        transform: rotateY(-10deg) translate(-80px, -40px) rotatez(3deg);
         z-index: 1;
-        img {
-          width: 25%;
+        iframe {
+          width: 100%;
           height: 100%;
           opacity: 0.9;
-          margin: 1rem;
           border-radius: 15px;
-          object-fit: cover;
-          box-shadow: 0 4px 5px 0 black;
-          transform: rotateY(-12deg) translate(-80px, -40px) rotatez(3deg);
+          object-fit: contain;
         }
-      }
-      .arti {
-        width: 100%;
-        height: 100%;
-        bottom: 20%;
-        position: absolute;
-        z-index: -2;
       }
     }
   }
-
-  #slide3 {
+  #slider3 {
     display: flex;
     flex-direction: row;
-  }
+    justify-content: space-around;
+    align-items: center;
+    background: radial-gradient(
+      at 20% 125%,
+      #feda78 20%,
+      #e23467 60%,
+      #ac2bb3 90%
+    );
+    .loader {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 3px solid rgb(255, 255, 255, 0.2);
+      border-top-color: transparent;
+      animation: rot1 1.2s linear infinite;
+    }
 
-  section.emptyground {
-    width: 100%;
-    height: 75vh;
+    @keyframes rot1 {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    div {
+      padding: 0.5rem;
+      border-radius: 15px;
+    }
+    .imgDescript {
+      position: relative;
+      z-index: -1;
+      width: 20%;
+      height: 80%;
+      background-color: white;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(/video/spot-image/석촌호수\ 야경.jpeg);
+      // border: 1px solid white;
+      box-shadow: 0 5px 10px 0 black;
+      overflow: hidden;
+      .imgPlace {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        padding: 0;
+        transition: 1s;
+
+        .profileHead {
+          width: 100%;
+          color: white;
+          font: bold 1rem/1 "sans-serif";
+          .profileCircleLine {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 25%;
+            left: 9%;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            background: radial-gradient(
+              at 20% 125%,
+              #feda78 20%,
+              #e23467 60%,
+              #ac2bb3 100%
+            );
+            .profileCircle {
+              width: 88%;
+              height: 88%;
+              border-radius: 50%;
+              background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS0Vio3vh0dYNlKnwk6KKVfGs9tSFKKbYY5w&usqp=CAU");
+              background-size: contain;
+              background-position: center;
+            }
+          }
+          .profileFollow {
+            position: absolute;
+            font: normal 0.8em sans-serif;
+            letter-spacing: 1px;
+            top: 24%;
+            left: 42%;
+            color: #fff;
+            .followBtn {
+              color: white;
+              width: max-content;
+              border-radius: 5px;
+              padding: 0 3rem;
+              background-color: #0ba6ff;
+            }
+          }
+
+          iframe {
+            width: 100%;
+            height: 55%;
+            margin-top: 55%;
+          }
+        }
+      }
+      .emogeContainer {
+        position: absolute;
+        top: 75%;
+        display: flex;
+        color: black;
+        font-size: 1.5rem;
+        letter-spacing: 0.8rem;
+      }
+
+      &:hover {
+        .imgPlace {
+          cursor: pointer;
+          transform: translateY(100%);
+          opacity: 0;
+        }
+      }
+    }
   }
 }
 
