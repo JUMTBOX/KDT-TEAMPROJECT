@@ -22,6 +22,184 @@ a {
   color: #fff;
 }
 
+.scroller-section #slider3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: radial-gradient(at 20% 125%, #feda78 20%, #e23467 60%, #ac2bb3 90%);
+}
+.scroller-section #slider3 div {
+  padding: 0.5rem;
+  border-radius: 15px;
+}
+.scroller-section #slider3 .imgDescript2 {
+  position: relative;
+  z-index: -1;
+  width: 20%;
+  height: 80%;
+  background-color: white;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(/video/spot-image/서울스카이.jpg);
+  box-shadow: 0 5px 10px 0 black;
+  overflow: hidden;
+}
+.scroller-section #slider3 .imgDescript2 .imgPlace2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  padding: 0;
+  transition: 1s;
+}
+.scroller-section #slider3 .imgDescript2 .imgPlace2 .profileHead2 {
+  width: 100%;
+  color: white;
+  font: bold 1rem/1 "sans-serif";
+}
+.scroller-section #slider3 .imgDescript2 .imgPlace2 .profileHead2 .profileCircleLine2 {
+  display: flex;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 9%;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background: radial-gradient(at 20% 125%, #feda78 20%, #e23467 60%, #ac2bb3 100%);
+}
+.scroller-section #slider3 .imgDescript2 .imgPlace2 .profileHead2 .profileCircleLine2 .profileCircle2 {
+  width: 88%;
+  height: 88%;
+  border-radius: 50%;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMcZ29NyKyphm5BLll3Dd8MW5_GgAmwEJofQ&usqp=CAU");
+  background-size: contain;
+  background-position: center;
+}
+.scroller-section #slider3 .imgDescript2 .imgPlace2 .profileHead2 .profileFollow2 {
+  position: absolute;
+  font: normal 0.8em sans-serif;
+  letter-spacing: 1px;
+  top: 24%;
+  left: 42%;
+  color: #fff;
+}
+.scroller-section #slider3 .imgDescript2 .imgPlace2 .profileHead2 .profileFollow2 .followBtn2 {
+  color: white;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 5px;
+  padding: 0 3.5rem;
+  background-color: #0ba6ff;
+}
+.scroller-section #slider3 .imgDescript2 .imgPlace2 .profileHead2 iframe {
+  width: 100%;
+  height: 55%;
+  margin-top: 55%;
+}
+.scroller-section #slider3 .imgDescript2 .emogeContainer2 {
+  position: absolute;
+  top: 75%;
+  display: flex;
+  color: black;
+  font-size: 1.5rem;
+  letter-spacing: 0.8rem;
+}
+.scroller-section #slider3 .imgDescript2:hover .imgPlace2 {
+  cursor: pointer;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.scroller-section #slider3 .imgDescript3 {
+  position: relative;
+  z-index: -1;
+  width: 20%;
+  height: 80%;
+  background-color: white;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(/video/spot-image/ddp야경.jpeg);
+  box-shadow: 0 5px 10px 0 black;
+  overflow: hidden;
+}
+.scroller-section #slider3 .imgDescript3 .imgPlace3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  padding: 0;
+  transition: 1s;
+}
+.scroller-section #slider3 .imgDescript3 .imgPlace3 .profileHead3 {
+  width: 100%;
+  color: white;
+  font: bold 1rem/1 "sans-serif";
+}
+.scroller-section #slider3 .imgDescript3 .imgPlace3 .profileHead3 .profileCircleLine3 {
+  display: flex;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 9%;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background: radial-gradient(at 20% 125%, #feda78 20%, #e23467 60%, #ac2bb3 100%);
+}
+.scroller-section #slider3 .imgDescript3 .imgPlace3 .profileHead3 .profileCircleLine3 .profileCircle3 {
+  width: 88%;
+  height: 88%;
+  border-radius: 50%;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk7sxTIseipVjijcfd-r_7C_6ZjOst7WWn8A&usqp=CAU");
+  background-size: contain;
+  background-position: center;
+}
+.scroller-section #slider3 .imgDescript3 .imgPlace3 .profileHead3 .profileFollow3 {
+  position: absolute;
+  font: normal 0.8em sans-serif;
+  letter-spacing: 1px;
+  top: 24%;
+  left: 42%;
+  color: #fff;
+}
+.scroller-section #slider3 .imgDescript3 .imgPlace3 .profileHead3 .profileFollow3 .followBtn3 {
+  color: white;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 5px;
+  padding: 0 3.5rem;
+  background-color: #0ba6ff;
+}
+.scroller-section #slider3 .imgDescript3 .imgPlace3 .profileHead3 iframe {
+  width: 100%;
+  height: 55%;
+  margin-top: 55%;
+}
+.scroller-section #slider3 .imgDescript3 .emogeContainer3 {
+  position: absolute;
+  top: 75%;
+  display: flex;
+  color: black;
+  font-size: 1.5rem;
+  letter-spacing: 0.8rem;
+}
+.scroller-section #slider3 .imgDescript3:hover .imgPlace3 {
+  cursor: pointer;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
 @font-face {
   font-family: "Druk Wide Web Super";
   src: url("http://db.onlinewebfonts.com/t/2f8845bdde42e943355a39765c5be5c0.eot"); /* IE9*/
@@ -34,20 +212,21 @@ header {
   justify-content: space-between;
   padding: 0 7.5vw;
   align-items: center;
-  font: bold 3em/1 "Tilt Prism";
 }
 header ul {
   display: flex;
 }
 header ul li {
-  margin: 0 1vw;
-  font: bold 2rem/1 "Tilt Prism";
+  margin: 1vw;
+  font-size: 2rem;
 }
 header a {
   transition: color 0.2s, background-color 0.2s ease-in;
   opacity: 0;
   position: relative;
+  line-height: 2rem;
   letter-spacing: 1px;
+  font: bold 2rem/1 "Tilt Prism";
 }
 header a::before {
   content: "";
@@ -68,6 +247,9 @@ header a:hover::before, header a:focus::before {
 }
 header a:hover {
   background: linear-gradient(to top, #fbf13a 10%, transparent 50%);
+}
+header #headerLogo {
+  font-size: 3rem;
 }
 
 section {
@@ -389,22 +571,14 @@ section #slider2 .reverse .reverse-content iframe {
   -o-object-fit: contain;
      object-fit: contain;
 }
-section #slide3 {
+section #slider3 {
   display: flex;
   flex-direction: row;
-}
-section section.emptyground {
-  width: 100%;
-  height: 75vh;
-}
-
-#slider3 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  background: radial-gradient(at 20% 125%, #feda78 20%, #e23467 60%, #ac2bb3 90%);
 }
-#slider3 .loader {
+section #slider3 .loader {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -416,6 +590,92 @@ section section.emptyground {
   to {
     transform: rotate(360deg);
   }
+}
+section #slider3 div {
+  padding: 0.5rem;
+  border-radius: 15px;
+}
+section #slider3 .imgDescript {
+  position: relative;
+  z-index: -1;
+  width: 20%;
+  height: 80%;
+  background-color: white;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(/video/spot-image/석촌호수\ 야경.jpeg);
+  box-shadow: 0 5px 10px 0 black;
+  overflow: hidden;
+}
+section #slider3 .imgDescript .imgPlace {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  padding: 0;
+  transition: 1s;
+}
+section #slider3 .imgDescript .imgPlace .profileHead {
+  width: 100%;
+  color: white;
+  font: bold 1rem/1 "sans-serif";
+}
+section #slider3 .imgDescript .imgPlace .profileHead .profileCircleLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 9%;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background: radial-gradient(at 20% 125%, #feda78 20%, #e23467 60%, #ac2bb3 100%);
+}
+section #slider3 .imgDescript .imgPlace .profileHead .profileCircleLine .profileCircle {
+  width: 88%;
+  height: 88%;
+  border-radius: 50%;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS0Vio3vh0dYNlKnwk6KKVfGs9tSFKKbYY5w&usqp=CAU");
+  background-size: contain;
+  background-position: center;
+}
+section #slider3 .imgDescript .imgPlace .profileHead .profileFollow {
+  position: absolute;
+  font: normal 0.8em sans-serif;
+  letter-spacing: 1px;
+  top: 24%;
+  left: 42%;
+  color: #fff;
+}
+section #slider3 .imgDescript .imgPlace .profileHead .profileFollow .followBtn {
+  color: white;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 5px;
+  padding: 0 3rem;
+  background-color: #0ba6ff;
+}
+section #slider3 .imgDescript .imgPlace .profileHead iframe {
+  width: 100%;
+  height: 55%;
+  margin-top: 55%;
+}
+section #slider3 .imgDescript .emogeContainer {
+  position: absolute;
+  top: 75%;
+  display: flex;
+  color: black;
+  font-size: 1.5rem;
+  letter-spacing: 0.8rem;
+}
+section #slider3 .imgDescript:hover .imgPlace {
+  cursor: pointer;
+  transform: translateY(100%);
+  opacity: 0;
 }
 
 #commonUpButton {
