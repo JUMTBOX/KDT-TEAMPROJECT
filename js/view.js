@@ -190,8 +190,12 @@ instaImg.addEventListener(
 const slider3 = section.querySelector("#slider3");
 const loader = section.querySelector(".loader");
 
-slider3.addEventListener("mouseover", () => {
-  setTimeout(() => {
-    loader.style.display = "none";
-  }, 1000);
-});
+slider3.addEventListener(
+  "mouseover",
+  () => {
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 1000);
+  },
+  { once: true }
+);
