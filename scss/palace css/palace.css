@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,10 @@ body {
   background-color: #0c0b0d;
   color: #fff;
   position: relative;
+}
+
+.inner {
+  width: 1300px;
 }
 
 ul,
@@ -39,7 +44,7 @@ header {
   display: flex;
   padding: 0 7.5vw;
   align-items: center;
-  font: bold 3rem/1 "Tilt Prism";
+  font: bold 3rem/1 "Banger";
 }
 header a:hover {
   background: linear-gradient(to top, #fbf13a 10%, transparent 50%);
@@ -116,26 +121,30 @@ section {
   color: #f71818;
 }
 
-.palace-kb {
+.palace-kb .inner {
   position: relative;
   height: 700px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   padding-top: 30px;
-  background-color: #030101;
   font-family: "양진체";
   justify-content: center;
   align-items: center;
   overflow: hidden;
   margin-left: 100px;
+  background-image: url("../../video/palace/bg2.jpg");
+  background-size: contain;
+  background-size: height 700px;
 }
 .palace-kb .container {
   display: flex;
   justify-content: center;
-  width: 1400px;
-  border: solid 10px rgb(23, 38, 204);
+  width: 1200px;
+  border: solid 5px rgb(144, 152, 236);
   align-items: center;
-  top: 10%;
-  margin-left: 90px;
+  top: 20%;
+  margin-left: 80px;
+  margin-top: 50px;
+  overflow: hidden;
   transform: skew(5deg);
 }
 .palace-kb .container .card {
@@ -186,16 +195,24 @@ section {
   margin-right: 1em;
 }
 
-.palace-ds {
-  position: relative;
-  width: 1200px;
+.palace-ds .inner {
+  position: absolute;
+  width: 1300px;
   height: 700px;
+  left: 100px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-image: url("../../video/palace/bg2.jpg");
 }
 .palace-ds .slider-container {
   position: absolute;
   overflow: hidden;
-  width: 100%;
+  width: 1100px;
   height: 100vh;
+  margin-top: 40px;
+  left: 10px;
+  border: dashed 5px #f4aeef;
 }
 .palace-ds .slider-container .left-slide {
   height: 100%;
@@ -272,19 +289,28 @@ section {
   border-bottom-right-radius: 5px;
 }
 
+.palace-cdk .inner {
+  position: relative;
+  width: 1300px;
+  height: 730px;
+  margin-top: 10px;
+  margin-left: 100px;
+  background-image: url("../../video/palace/bg2.jpg");
+  overflow: hidden;
+}
 .palace-cdk .container {
   position: relative;
+  width: 1100px;
+  height: 670px;
+  margin-top: 20px;
+  left: 200px;
+  border: dashed 5px #e4e081;
+  overflow: hidden;
   /* Container for image text */
 }
 .palace-cdk .container .mySlides {
   display: none;
-}
-.palace-cdk .container .mySlides .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+  padding-bottom: 6px;
 }
 .palace-cdk .container .prev,
 .palace-cdk .container .next {
@@ -312,8 +338,9 @@ section {
 }
 .palace-cdk .container .caption-container {
   text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
+  background-color: #b76bb2;
+  padding: 4px 16px;
+  font-family: "양진체";
   color: white;
 }
 .palace-cdk .container .row:after {
@@ -326,7 +353,7 @@ section {
   width: 16.66%;
 }
 .palace-cdk .container .demo-cursor {
-  opacity: 0.6;
+  opacity: 0.4;
 }
 .palace-cdk .container .active,
 .palace-cdk .container .demo-cursor:hover {

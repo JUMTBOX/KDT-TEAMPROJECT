@@ -29,6 +29,18 @@ const changeSlide = (direction) => {
     slideRight.style.transform = `translateY(-${activeIndex * sliderHeight}px)`
     slideLeft.style.transform = `translateY(${activeIndex * sliderHeight}px)`
 }
+// banner
+window.addEventListener("scroll", function() {
+  console.log(window.scrollY);
+  if (window.scrollY > 1474) {
+    const elsalvadorSection = document.querySelector(".ds-banner");
+    elsalvadorSection.classList.add("animate");
+  } else {
+    const elsalvadorSection = document.querySelector(".ds-banner");
+    elsalvadorSection.classList.remove("animate");
+  }
+
+});
 
 //덕수궁 test
 const slideContainer = document.querySelector('.slider-container')
@@ -53,7 +65,7 @@ const changeSlider = (direction) => {
       activeSIndex = 0
     }
   }
-  else if(direction === 'down') {
+  else if (direction === 'down') {
     activeSIndex--
     if(activeSIndex > 0) {
       activeSIndex = slidesL -1
