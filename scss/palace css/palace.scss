@@ -101,11 +101,11 @@ header {
 
 }
 
-section {
-  width: 100%;
-  height: 1000px;
-  overflow: hidden;
-}
+// section {
+//   width: 100%;
+//   height: 1000px;
+//   overflow: hidden;
+// }
 
 .mq1,
 .mq2 {
@@ -127,19 +127,20 @@ section {
 
   //경복궁 
   .palace-kb {
+    background-image: url('../../video/palace/bg-4.jpg');
+    background-position: contain;
+
     .inner {
       position: relative;
-      height: 700px;
+      height: 600px;
       margin-bottom: 100px;
-      padding-top: 30px;
+      margin-top: 30px;
       font-family: '양진체';
       justify-content: center;
       align-items: center;
       overflow: hidden;
       margin-left: 100px;
-      background-image: url('../../video/palace/bg2.jpg');
-      background-size: contain;
-      background-size: height 700px;
+
     }
     
   .container {
@@ -149,8 +150,8 @@ section {
     border: solid 5px rgb(144, 152, 236);
     align-items: center;
     top: 20%;
-    margin-left: 80px;
-    margin-top: 50px;
+    margin-left: 85px;
+    margin-top: 30px;
     overflow: hidden;
     transform: skew(5deg);
     
@@ -208,15 +209,19 @@ section {
 
 //덕수궁 
 .palace-ds {
+  height: 600px;
+  background-image: url('../../video/palace/bg2.jpg');
+  background-position: contain;
+  
+ 
   .inner {
-    position: absolute;
+    position: relative;
     width: 1300px;
-    height: 700px;
-    left: 100px;
+    height: 600px;
+    left: 80px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-image: url('../../video/palace/bg2.jpg');
   }
  
 
@@ -227,7 +232,7 @@ section {
     height: 100vh;
     margin-top: 40px;
     left: 10px;
-    border: dashed 5px #f4aeef;
+    border: solid 5px #84ff9b;
     
     
      .left-slide{
@@ -250,6 +255,9 @@ section {
           font-size: 40px;
           margin-bottom: 10px;
           margin-top: -30px;
+          color: rgb(100, 255, 118);
+          text-shadow: -2px 0 #400bee, 0 2px #400bee, 2px 0 #400bee, 0 -2px #400bee;
+    
         }
       }
     }
@@ -319,101 +327,93 @@ section {
 
 // 창경궁
 .palace-cdk {
-  
-  .inner {
+  background-image: url('../../video/palace/bg5.jpg');
+  background-position: contain;
+  height: 700px;
+
+   .inner {
     position: relative;
-    width: 1300px;
-    height: 730px;
-    margin-top: 10px;
+    height: 680px;
+    margin-top: 100px;
     margin-left: 100px;
-    background-image: url('../../video/palace/bg2.jpg');
     overflow: hidden;
 
-  }
 
+    .container {
+      position: relative;
+      width: 1000px;
+      height: 700px;
+      margin-top: 20px;
+      left: 200px;
+      border: dashed 5px #e4e081;
+      overflow: hidden;
 
-  .container {
-    position: relative;
-    width: 1100px;
-    height: 670px;
-    margin-top: 20px;
-    left: 200px;
-    border: dashed 5px #e4e081;
-    overflow: hidden;
-    .mySlides {
-      display: none;
-      padding-bottom: 6px;
-      
+      .mySlides {
+        display: none;
+        padding-bottom: 6px; 
+        height: 100%px;   
+      }
 
-  
-      // .numbertext {
-      //   color: #f2f2f2;
-      //   font-size: 12px;
-      //   padding: 8px 12px;
-      //   position: absolute;
-      //   top: 0;
-      // }
-      
-    }
-  
-    .prev,
-    .next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-    }
-  
-    .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-    }
-  
-  
-    .prev:hover,
-    .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    }
-  
-    /* Container for image text */
-    .caption-container {
-    text-align: center;
-    background-color: #b76bb2;
-    padding: 4px 16px;
-    font-family: '양진체';
-    color: white;
-
-    }
-  
-    .row {
-      &:after {
-        content: "";
-        display: table;
-        clear: both;
+      .prev,
+      .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+      }
+    
+      .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+      }
+    
+    
+      .prev:hover,
+      .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      }
+    
+      /* Container for image text */
+      .caption-container {
+      position: relative;
+      text-align: center;
+      background-color: #b76bb2;
+      padding: 4px 16px;
+      font-family: '양진체';
+      color: white;
+      }
+    
+      .row {
+        position: relative;
+        height: 100px;
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+          }
         }
-      }
-      .column {
-          float: left;
-          width: 16.66%;
-      }
-          .demo-cursor {
-            opacity: 0.4;
-          }
-          
-          .active,
-          .demo-cursor:hover {
-            opacity: 1;
-          }
-        
-    }
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+            .demo-cursor {
+              opacity: 0.4;
+            }
+            
+            .active,
+            .demo-cursor:hover {
+              opacity: 1;
+            }
+     } 
+  }
 }
   
 #commonUpButton {

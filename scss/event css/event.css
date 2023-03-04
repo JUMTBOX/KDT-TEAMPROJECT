@@ -25,11 +25,9 @@ header {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
   font: bold 3rem/1 "Tilt Prism";
 }
 header .inner {
-  display: flex;
   padding: 0 7.5vw;
   z-index: 2;
 }
@@ -47,6 +45,7 @@ header .inner .menu .menu__sub-menu {
 }
 header .inner .menu .menu__sub-menu li {
   margin: 0 20px;
+  font-size: 0.7em;
 }
 header a:hover {
   background: linear-gradient(to top, #fbf13a 10%, transparent 50%);
@@ -59,9 +58,10 @@ header a:hover {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  border: 1px solid white;
+  border: 2px solid white;
   background-color: rgb(8, 53, 53);
   color: white;
+  z-index: 999;
   cursor: pointer;
 }
 #commonUpButton:hover {
@@ -73,7 +73,7 @@ header a:hover {
 
 .video {
   position: absolute;
-  top: -140px;
+  top: -132px;
   z-index: 1;
 }
 .video video {
@@ -85,27 +85,32 @@ header a:hover {
 .section-1 {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 3;
   transition: 0.8s;
   background-color: #0c0b0d;
-  position: absolute;
+  background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   top: 100%;
 }
 .section-1 .container {
-  margin: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .section-1 .container .line-1,
 .section-1 .container .line-2 {
   display: flex;
-  justify-content: center;
 }
 .section-1 .container .line-1 .element,
 .section-1 .container .line-2 .element {
-  background-color: skyblue;
-  width: 20vw;
-  height: 40vh;
-  margin: 20px 20px;
+  display: flex;
+  align-items: center;
+  width: 19vw;
+  height: 28vh;
+  margin: 25px 25px;
+  overflow: hidden;
+  transform: rotate(-3deg);
 }
 .section-1 .container .line-1 .element .content .title,
 .section-1 .container .line-2 .element .content .title {
@@ -114,11 +119,70 @@ header a:hover {
 }
 .section-1 .container .line-1 .element .content .text,
 .section-1 .container .line-2 .element .content .text {
-  margin-top: 30px;
+  font-size: 1.2em;
+  margin-top: 40px;
+  line-height: 2;
+}
+.section-1 .container .line-1 .element .content .text a:hover,
+.section-1 .container .line-2 .element .content .text a:hover {
+  text-decoration: underline;
 }
 .section-1 .container .line-1 .element img,
 .section-1 .container .line-2 .element img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  border: 4px solid lightgray;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.section-1 .container .line-1 > .element:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 20vw;
+  height: 30vh;
+  transform: rotate(0);
+}
+.section-1 .container .detailPopup {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 70vh;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+}
+.section-1 .container .detailPopup img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border: 2px solid gray;
+}
+.section-1 .container .detailPopup .fa-regular {
+  position: absolute;
+  font-weight: lighter;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 2em;
+}
+.section-1 .bottom-text {
+  position: relative;
+  white-space: nowrap;
+  width: 80%;
+  font-size: 2em;
+  margin: 50px 100px 0;
+}
+
+.show {
+  visibility: visible;
 }
 
 .section-2 {
@@ -128,7 +192,6 @@ header a:hover {
   z-index: 3;
   transition: 0.8s;
   background-color: green;
-  position: absolute;
   top: 200%;
 }
 
@@ -139,7 +202,6 @@ header a:hover {
   z-index: 3;
   transition: 0.8s;
   background-color: skyblue;
-  position: absolute;
   top: 300%;
 }
 
@@ -150,6 +212,5 @@ header a:hover {
   z-index: 3;
   transition: 0.8s;
   background-color: beige;
-  position: absolute;
   top: 400%;
 }/*# sourceMappingURL=event.css.map */
