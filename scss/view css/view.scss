@@ -1,8 +1,10 @@
 //RESET
 @import "reset2";
-//IMPORT View2
-@import "view2";
+
 //FONT
+
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+// "Bangers"
 @import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
 // font-family: 'Gajraj One', cursive;
 // font-family: 'Tilt Prism', cursive;
@@ -49,7 +51,8 @@ header {
     position: relative;
     line-height: 2rem;
     letter-spacing: 1px;
-    font: bold 2rem/1 "Tilt Prism";
+    font: bold 2.5rem/1 "Bangers";
+    text-shadow: -2px 0 #400bee, 0 2px #400bee, 2px 0 #400bee, 0 -2px #400bee;
     &::before {
       content: "";
       display: block;
@@ -74,7 +77,7 @@ header {
   }
 
   #headerLogo {
-    font-size: 3rem;
+    font-size: 5.5rem;
   }
 }
 
@@ -421,20 +424,6 @@ section {
       #e23467 60%,
       #ac2bb3 90%
     );
-    .loader {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: 3px solid rgb(255, 255, 255, 0.2);
-      border-top-color: transparent;
-      animation: rot1 1.2s linear infinite;
-    }
-
-    @keyframes rot1 {
-      to {
-        transform: rotate(360deg);
-      }
-    }
     div {
       padding: 0.5rem;
       border-radius: 15px;
@@ -449,7 +438,6 @@ section {
       background-position: center;
       background-repeat: no-repeat;
       background-image: url(/video/spot-image/석촌호수\ 야경.jpeg);
-      // border: 1px solid white;
       box-shadow: 0 5px 10px 0 black;
       overflow: hidden;
       .imgPlace {

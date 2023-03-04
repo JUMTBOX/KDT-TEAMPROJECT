@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
 * {
   margin: 0;
@@ -226,7 +227,8 @@ header a {
   position: relative;
   line-height: 2rem;
   letter-spacing: 1px;
-  font: bold 2rem/1 "Tilt Prism";
+  font: bold 2.5rem/1 "Bangers";
+  text-shadow: -2px 0 #400bee, 0 2px #400bee, 2px 0 #400bee, 0 -2px #400bee;
 }
 header a::before {
   content: "";
@@ -249,7 +251,7 @@ header a:hover {
   background: linear-gradient(to top, #fbf13a 10%, transparent 50%);
 }
 header #headerLogo {
-  font-size: 3rem;
+  font-size: 5.5rem;
 }
 
 section {
