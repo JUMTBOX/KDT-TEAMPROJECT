@@ -95,6 +95,7 @@ figure .text:hover p {
 section {
   width: 100%;
   height: 1000px;
+  overflow: hidden;
 }
 
 .mq1,
@@ -125,6 +126,7 @@ section {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  margin-left: 100px;
 }
 .palace-kb .container {
   display: flex;
@@ -187,10 +189,7 @@ section {
 .palace-ds {
   position: relative;
   width: 1200px;
-  height: 100vh;
-  top: 0%;
-  margin-bottom: 200px;
-  left: 50px;
+  height: 700px;
 }
 .palace-ds .slider-container {
   position: absolute;
@@ -204,12 +203,9 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.7s ease-in-out;
 }
-.palace-ds .slider-container .left-slide .item1,
-.palace-ds .slider-container .left-slide .item2,
-.palace-ds .slider-container .left-slide .item3,
-.palace-ds .slider-container .left-slide .item4 {
+.palace-ds .slider-container .left-slide div {
   height: 100%;
   width: 100%;
   display: flex;
@@ -218,96 +214,80 @@ section {
   justify-content: center;
   color: #fff;
 }
-.palace-ds .slider-container .left-slide .item1 {
-  background-color: #FD3555;
-}
-.palace-ds .slider-container .left-slide .item2 {
-  background-color: #2A86BA;
-}
-.palace-ds .slider-container .left-slide .item3 {
-  background-color: #252E33;
-}
-.palace-ds .slider-container .left-slide .item4 {
-  background-color: #FFB866;
-}
-.palace-ds .slider-container .left-slide h1 {
+.palace-ds .slider-container .left-slide div h1 {
   font-size: 40px;
-  font-family: "양진체";
   margin-bottom: 10px;
   margin-top: -30px;
 }
 .palace-ds .slider-container .right-slide {
   height: 100%;
   position: absolute;
-  top: 0%;
+  top: 0;
   left: 35%;
-  width: 100%;
-  transition: transform 0.5s ease-in-out;
+  width: 65%;
+  transition: transform 0.7s ease-in-out;
 }
-.palace-ds .slider-container .right-slide .item1,
-.palace-ds .slider-container .right-slide .item2,
-.palace-ds .slider-container .right-slide .item3,
-.palace-ds .slider-container .right-slide .item4 {
+.palace-ds .slider-container .right-slide div {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   height: 100%;
   width: 100%;
 }
-.palace-ds .slider-container .right-slide .item1 {
-  background-image: url("../../video/palace/ds-junggwan.jpg");
-}
-.palace-ds .slider-container .right-slide .item2 {
-  background-image: url("../../video/palace/ds-kyungwoonham.jpg");
-}
-.palace-ds .slider-container .right-slide .item3 {
-  background-image: url("../../video/palace/ds-seokjo.jpg");
-}
-.palace-ds .slider-container .right-slide .item4 {
-  background-image: url("../../video/palace/ds-seokuh.jpg");
-}
-.palace-ds .slider-container button {
+.palace-ds .slider-container .action-buttons {
   background-color: #fff;
   border: none;
   color: #aaa;
   cursor: pointer;
   font-size: 16px;
-  padding: 15px;
 }
-.palace-ds .slider-container button:hover {
+.palace-ds .slider-container .action-buttons:hover {
   color: #222;
 }
-.palace-ds .slider-container button:focus {
-  outline: none;
+.palace-ds .slider-container .action-buttons:hover {
+  color: #222;
 }
-.palace-ds .slider-container .action-buttons {
+.palace-ds .slider-container .down-button,
+.palace-ds .slider-container .up-button {
+  padding: 15px;
   position: absolute;
-  left: 33%;
+  left: 35%;
   top: 50%;
   z-index: 100;
 }
-.palace-ds .slider-container .action-buttons .down-button {
+.palace-ds .slider-container:hover {
+  color: #222;
+}
+.palace-ds .slider-container:focus {
+  outline: none;
+}
+.palace-ds .slider-container .down-button {
   transform: translateX(-100%);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.palace-ds .slider-container .action-buttons .up-button {
+.palace-ds .slider-container .up-button {
   transform: translateY(-100%);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-.container {
-  position: absolute;
-  top: 80%;
-  width: 100%;
-  height: 70%;
+.palace-cdk .container {
+  position: relative;
+  /* Container for image text */
 }
-.container .mySlides {
+.palace-cdk .container .mySlides {
   display: none;
 }
-.container .prev,
-.container .next {
+.palace-cdk .container .mySlides .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.palace-cdk .container .prev,
+.palace-cdk .container .next {
   cursor: pointer;
   position: absolute;
   top: 40%;
@@ -322,34 +302,34 @@ section {
        user-select: none;
   -webkit-user-select: none;
 }
-.container .next {
+.palace-cdk .container .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-.container .prev:hover,
-.container .next:hover {
+.palace-cdk .container .prev:hover,
+.palace-cdk .container .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.container .caption-container {
+.palace-cdk .container .caption-container {
   text-align: center;
   background-color: #222;
   padding: 2px 16px;
   color: white;
 }
-.container .row:after {
+.palace-cdk .container .row:after {
   content: "";
   display: table;
   clear: both;
 }
-.container .column {
+.palace-cdk .container .column {
   float: left;
   width: 16.66%;
 }
-.container .demo-cursor {
+.palace-cdk .container .demo-cursor {
   opacity: 0.6;
 }
-.container .active,
-.container .demo:hover {
+.palace-cdk .container .active,
+.palace-cdk .container .demo-cursor:hover {
   opacity: 1;
 }
 
