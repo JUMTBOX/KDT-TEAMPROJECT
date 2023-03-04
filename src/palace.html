@@ -13,6 +13,7 @@
   <!-- JS -->
   <script defer src="/js/palace.js"></script>
   <script defer src="/js/commonButton.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -20,9 +21,9 @@
     <a href="/main.html"> NIGHT IN SEOUL</a>
     <ul>
       <li>Drive</li>
-      <li>Events</li>
-      <li>Palace</li>
-      <li>View</li>
+      <li>Drive</li>
+      <li>Drive</li>
+      <li>Drive</li>
     </ul>
   </header>
   <figure>
@@ -73,34 +74,43 @@
   </section>
 
 
-  <!-- 덕수궁 -->
+  <!-- 덕수궁  -->
   <section class="palace-ds">
     <div class="slider-container">
       <div class="left-slide">
-        <div class="item1">
-          <h1>중 관 전</h1>
-          <p>all in pink</p>
+        <div style="background-color: rgb(74, 202, 127)">
+          <h1>green Cherrish</h1>
+          <p>to evlove into care</p>
         </div>
-        <div class="item2">
-          <h1>경 운 함</h1>
-          <p>with it's mountains</p>
+        <div style="background-color: rgb(254, 160, 0)">
+          <h1>Yellow Luck</h1>
+          <p>Shinning the clouds</p>
         </div>
-        <div class="item3">
-          <h1>석 조 전</h1>
+        <div style="background-color: rgb(231, 58, 95)">
+          <h1>Redness Lust</h1>
           <p>in the wilderness</p>
         </div>
-        <div class="item4">
-          <h1>석 어 전</h1>
+        <div style="background-color: rgb(176, 136, 240)">
+          <h1>Lavanda Love</h1>
           <p>in the sunset</p>
+        </div>
+        <div style="background-color: rgb(239, 93, 166)">
+          <h1>Pink Cherrish</h1>
+          <p>to evlove into care</p>
+        </div>
+        <div style="background-color: rgb(254, 160, 0)">
+          <h1>orange dddd</h1>
+          <p>Shinning the clouds</p>
         </div>
       </div>
       <div class="right-slide">
-        <div class="item1"></div>
-        <div class="item2"></div>
-        <div class="item3"></div>
-        <div class="item4"></div>
+        <div style="background-image: url('../video/palace/ds-junggwan.jpg');"></div>
+        <div style="background-image: url('../video/palace/ds-kyungwoonham.jpg');"></div>
+        <div style="background-image: url('../video/palace/ds-seokjo.jpg');"></div>
+        <div style="background-image: url('../video/palace/ds-seokuh.jpg');"></div>
+        <div style="background-image: url('../video/palace/ds-seokjo11.jpg');"></div>
+        <div style="background-image: url('../video/palace/ds');"></div>
       </div>
-
       <div class="action-buttons">
         <button class="down-button">
           <i class="fas fa-arrow-down"></i>
@@ -117,34 +127,35 @@
   <section class="palace-cdk">
     <div class="container">
 
+      <!-- Full-width images with number text -->
       <div class="mySlides">
-        <!-- <div class="numbertext">1 / 6</div> -->
-        <img src="../video/palace/ck-buyong.jpg" style="width:100%">
+        <div class="numbertext">1 / 6</div>
+        <img src="./image/1.jpg" style="width:100%; height:300px">
       </div>
 
       <div class="mySlides">
-        <!-- <div class="numbertext">2 / 6</div> -->
-        <img src="../video/palace/ck-chundang.jpg" style="width:100%">
+        <div class="numbertext">2 / 6</div>
+        <img src="./image/2.jpg" style="width:100%; height:300px">
       </div>
 
       <div class="mySlides">
-        <!-- <div class="numbertext">3 / 6</div> -->
-        <img src="../video/palace/ck-daejo.jpg" style="width:100%">
+        <div class="numbertext">3 / 6</div>
+        <img src="./image/3.jpg" style="width:100%; height:300px">
       </div>
 
       <div class="mySlides">
-        <!-- <div class="numbertext">4 / 6</div> -->
-        <img src="../video/palace/ck-huijeong.jpg" style="width:100%">
+        <div class="numbertext">4 / 6</div>
+        <img src="./image/4.jpg" style="width:100%; height:300px">
       </div>
 
       <div class="mySlides">
-        <!-- <div class="numbertext">5 / 6</div> -->
-        <img src="../video/palace/ck-injeong.jpeg" style="width:100%">
+        <div class="numbertext">5 / 6</div>
+        <img src="./image/5.jpg" style="width:100%; height:300px">
       </div>
 
       <div class="mySlides">
-        <!-- <div class="numbertext">6 / 6</div> -->
-        <img src="../video/palace/ck-okcheonmyungjeon.jpg" style="width:100%">
+        <div class="numbertext">6 / 6</div>
+        <img src="./image/1.jpg" style="width:100%; height:300px">
       </div>
 
       <!-- Next and previous buttons -->
@@ -159,33 +170,30 @@
       <!-- Thumbnail images -->
       <div class="row">
         <div class="column">
-          <img class="demo-cursor" src="../video/palace/ck-buyong.jpg" style="width:100%" onclick="currentSlide(1)"
-            alt="부용전">
+          <img class="demo-cursor" src="/image/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
         </div>
         <div class="column">
-          <img class="demo-cursor" src="../video/palace/ck-chundang.jpg" style="width:100%" onclick="currentSlide(2)"
-            alt="춘당지">
+          <img class="demo-cursor" src="/image/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
         </div>
         <div class="column">
-          <img class="demo-cursor" src="../video/palace/ck-daejo.jpg" style="width:100%" onclick="currentSlide(3)"
-            alt="대조전">
+          <img class="demo-cursor" src="/image/3.jpg" style="width:100%" onclick="currentSlide(3)"
+            alt="Mountains and fjords">
         </div>
         <div class="column">
-          <img class="demo-cursor" src="../video/palace/ck-huijeong.jpg" style="width:100%" onclick="currentSlide(4)"
-            alt="희정루">
+          <img class="demo-cursor" src="/image/4.jpg" style="width:100%" onclick="currentSlide(4)"
+            alt="Northern Lights">
         </div>
         <div class="column">
-          <img class="demo-cursor" src="../video/palace/ck-injeong.jpeg" style="width:100%" onclick="currentSlide(5)"
-            alt="인정전">
+          <img class="demo-cursor" src="/image/5.jpg" style="width:100%" onclick="currentSlide(5)"
+            alt="Nature and sunrise">
         </div>
         <div class="column">
-          <img class="demo-cursor" src="../video/palace/ck-okcheonmyungjeon.jpg" style="width:100%"
-            onclick="currentSlide(6)" alt="옥천전 & 명정전">
+          <img class="demo-cursor" src="/image/1.jpg" style="width:100%" onclick="currentSlide(6)"
+            alt="Snowy Mountains">
         </div>
       </div>
     </div>
   </section>
-
 
   <!-- BUTTON -->
   <button id="commonUpButton">
