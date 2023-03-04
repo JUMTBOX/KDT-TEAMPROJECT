@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- FONT AWESOME -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/7090071867.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- SCSS -->
+    <link rel="stylesheet" href="/scss/palace css/palace.css" />
+    <!-- JS -->
+    <script defer src="/js/palace.js"></script>
+    <script defer src="/js/commonButton.js"></script>
+  </head>
 
 <head>
   <meta charset="UTF-8" />
@@ -192,8 +209,7 @@
             alt="Snowy Mountains">
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   <!-- BUTTON -->
   <button id="commonUpButton">
@@ -201,4 +217,126 @@
   </button>
 </body>
 
+    <!-- 창경궁 -->
+    <section class="palace-cdk">
+      <div class="container">
+        <div class="mySlides">
+          <!-- <div class="numbertext">1 / 6</div> -->
+          <img src="../video/palace/ck-buyong.jpg" style="width: 100%" />
+          <!-- src="../video/palace/ck-buyong.jpg" -->
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">2 / 6</div> -->
+          <img src="../video/palace/ck-chundang.jpg" style="width: 100%" />
+          <!-- src="../video/palace/ck-chundang.jpg" -->
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">3 / 6</div> -->
+          <img src="../video/palace/ck-daejo.jpg" style="width: 100%" />
+          <!-- src="../video/palace/ck-daejo.jpg" -->
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">4 / 6</div> -->
+          <img src="../video/palace/ck-huijeong.jpg" style="width: 100%" />
+          <!-- src="../video/palace/ck-huijeong.jpg" -->
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">5 / 6</div> -->
+          <img src="../video/palace/ck-injeong.jpeg" style="width: 100%" />
+          <!-- src="../video/palace/ck-injeong.jpeg" -->
+        </div>
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">6 / 6</div> -->
+          <img
+            src="../video/palace/ck-okcheonmyungjeon.jpg"
+            style="width: 100%"
+          />
+          <!-- src="../video/palace/ck-okcheonmyungjeon.jpg" -->
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Image text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img
+              class="demo-cursor"
+              src="../video/palace/ck-buyong.jpg"
+              style="width: 100%"
+              onclick="currentSlide(1)"
+              alt="부용전"
+            />
+            <!-- src="../video/palace/ck-buyong.jpg" -->
+          </div>
+          <div class="column">
+            <img
+              class="demo-cursor"
+              src="../video/palace/ck-chundang.jpg"
+              style="width: 100%"
+              onclick="currentSlide(2)"
+              alt="춘당지"
+            />
+            <!-- src="../video/palace/ck-chundang.jpg" -->
+          </div>
+          <div class="column">
+            <img
+              class="demo-cursor"
+              src="../video/palace/ck-daejo.jpg"
+              style="width: 100%"
+              onclick="currentSlide(3)"
+              alt="대조전"
+            />
+            <!-- src="../video/palace/ck-daejo.jpg" -->
+          </div>
+          <div class="column">
+            <img
+              class="demo-cursor"
+              src="../video/palace/ck-huijeong.jpg"
+              style="width: 100%"
+              onclick="currentSlide(4)"
+              alt="희정루"
+            />
+            <!-- src="../video/palace/ck-huijeong.jpg" -->
+          </div>
+          <div class="column">
+            <img
+              class="demo-cursor"
+              src="../video/palace/ck-injeong.jpeg"
+              style="width: 100%"
+              onclick="currentSlide(5)"
+              alt="인정전"
+            />
+            <!-- src="../video/palace/ck-injeong.jpeg" -->
+          </div>
+          <div class="column">
+            <img
+              class="demo-cursor"
+              src="../video/palace/ck-okcheonmyungjeon.jpg"
+              style="width: 100%"
+              onclick="currentSlide(6)"
+              alt="옥천전 & 명정전"
+            />
+            <!-- src="../video/palace/ck-okcheonmyungjeon.jpg" -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUTTON -->
+    <button id="commonUpButton">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </body>
 </html>
