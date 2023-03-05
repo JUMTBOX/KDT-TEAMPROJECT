@@ -116,7 +116,7 @@ figure .text:hover p {
 }
 
 .palace-kb {
-  background-image: url("../../video/palace/bg-4.jpg");
+  background-image: url("../../video/palace-image/bg-4.jpg");
   background-position: contain;
 }
 .palace-kb .inner {
@@ -192,7 +192,7 @@ figure .text:hover p {
 
 .palace-ds {
   height: 600px;
-  background-image: url("../../video/palace/bg2.jpg");
+  background-image: url("../../video/palace-image/bg2.jpg");
   background-position: contain;
 }
 .palace-ds .inner {
@@ -291,7 +291,7 @@ figure .text:hover p {
 }
 
 .palace-cdk {
-  background-image: url("../../video/palace/bg5.jpg");
+  background-image: url("../../video/palace-image/bg5.jpg");
   background-position: contain;
   height: 700px;
 }
