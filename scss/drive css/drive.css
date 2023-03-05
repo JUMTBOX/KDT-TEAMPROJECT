@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap%22");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -16,9 +18,11 @@ a {
 
 @font-face {
   font-family: "bitbit";
-  src: url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff"), url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2");
+  src: url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff"),
+    url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2");
   font-family: "Cafe24Ssurround";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -60,7 +64,7 @@ header {
   z-index: 9999;
 }
 header h1 a {
-  font: bold 48px/50px "Tilt Prism";
+  font: bold 5.5rem/50px "Bangers";
   color: #fff;
 }
 header .gnb {
@@ -70,9 +74,10 @@ header .gnb li {
   margin: 0 20px;
 }
 header .gnb li a {
-  font: 24px "Tilt Prism";
   letter-spacing: 1px;
   color: white;
+  font: bold 2.5rem/1 "Bangers";
+  text-shadow: -2px 0 #400bee, 0 2px #400bee, 2px 0 #400bee, 0 -2px #400bee;
 }
 header .gnb li a:hover {
   font-weight: bold;
@@ -91,7 +96,7 @@ figure video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 @keyframes slideLeftOutRightIn {
@@ -166,13 +171,13 @@ figure video {
   width: 280px;
   height: 50px;
   color: #fff;
-  font: bold 48px/50px "Cafe24Ssurround";
+  font: bold 48px/50px "Noto Sans KR", sans-serif;
   margin-bottom: 24px;
 }
 #two .drive--cos .drive span {
   display: inline-block;
   width: 100%;
-  font: normal 24px "Cafe24Ssurround";
+  font: normal 24px "Noto Sans KR", sans-serif;
   margin-bottom: 24px;
 }
 #two .sub-btn {
@@ -205,6 +210,7 @@ figure video {
   display: inline-block;
   color: #fff;
   font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
   padding: 5px;
   margin-top: 5px;
 }
@@ -235,49 +241,53 @@ figure video {
   position: absolute;
   top: 100%;
   width: 100%;
-  height: 2700px;
+  height: 1900px;
+  margin-top: 180px;
   background-color: #0c0b0d;
-  overflow: hidden;
 }
 #linesvg g {
   position: absolute;
-  width: 100%;
-  height: 100%;
   z-index: 99;
   stroke: #fbf13a;
 }
 
 .st0 {
   fill: none;
+  stroke: #fbf13a;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
 }
 
 .seoul {
   position: relative;
   width: 100%;
-  height: 980px;
+  height: 780px;
   z-index: 9999;
   color: #fff;
 }
 .seoul img {
   position: absolute;
-  width: 45vw;
+  width: 50vw;
   top: 5%;
   left: 50%;
   transform: translateX(-400px);
 }
 .seoul .container {
   position: absolute;
+  top: 50%;
+  left: 50%;
   border-radius: 50%;
   height: 36px;
   width: 36px;
-  animation: rotate_3922 1.2s linear infinite;
+  animation: rotate_3922 1s linear infinite;
   background-color: #9b59b6;
-  background: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
 }
 .seoul .container:hover {
-  width: 450px;
-  height: 450px;
-  animation-play-state: paused;
+  width: 500px;
+  height: 200px;
 }
 .seoul .container span {
   position: absolute;
@@ -299,101 +309,50 @@ figure video {
 .seoul .container span:nth-of-type(4) {
   filter: blur(50px);
 }
+.seoul .container::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background-color: #fff;
+  border: solid 5px #ffffff;
+  border-radius: 50%;
+}
 @keyframes rotate_3922 {
   from {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 .seoul .container1 {
-  top: 5%;
-  left: 30%;
+  top: 65%;
+  left: 53%;
 }
 .seoul .container1::after {
   content: "";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  border: solid 5px #ffffff;
-  border-radius: 50%;
-  background-image: url(/video/map_01.png);
-}
-.seoul .container3 {
-  top: 15%;
-  left: 20%;
-}
-.seoul .container3::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  background-image: url(/video/drive3.png);
-  border: solid 5px #ffffff;
-  border-radius: 50%;
-}
-.seoul .container5 {
-  top: 25%;
-  left: 30%;
-}
-.seoul .container5::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  background-image: url(/video/drive3.png);
-  border: solid 5px #ffffff;
-  border-radius: 50%;
+  background-image: url(/video/banpojpg.jpg);
 }
 .seoul .container2 {
-  top: 5%;
-  left: 70%;
+  top: 37%;
+  left: 49%;
 }
-.seoul .container2::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  background-image: url(/video/drive3.png);
-  border: solid 5px #ffffff;
-  border-radius: 50%;
+.seoul .container3 {
+  top: 53%;
+  left: 50%;
 }
 .seoul .container4 {
-  top: 15%;
-  left: 80%;
+  top: 51%;
+  left: 54%;
 }
-.seoul .container4::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  background-image: url(/video/drive3.png);
-  border: solid 5px #ffffff;
-  border-radius: 50%;
+.seoul .container5 {
+  top: 56%;
+  left: 41%;
 }
 .seoul .container6 {
-  top: 25%;
-  left: 70%;
-}
-.seoul .container6::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  background-image: url(/video/drive3.png);
-  border: solid 5px #ffffff;
-  border-radius: 50%;
-}/*# sourceMappingURL=drive.css.map */
+  top: 61%;
+  left: 58%;
+} /*# sourceMappingURL=drive.css.map */

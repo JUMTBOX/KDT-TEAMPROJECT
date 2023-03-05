@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
 * {
   margin: 0;
@@ -19,6 +20,144 @@ ol {
 
 a {
   text-decoration: none;
+}
+
+.section-2 {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  transition: 0.8s;
+  top: 200%;
+}
+.section-2 .inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #181818;
+}
+.section-2 .inner .switchBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.section-2 .inner .switchBox input {
+  display: none;
+}
+.section-2 .inner .switchBox .on,
+.section-2 .inner .switchBox .off {
+  position: absolute;
+  text-align: center;
+  text-shadow: inset 1px 1px 1px black;
+  width: 100%;
+}
+.section-2 .inner .switchBox .on {
+  color: #fff;
+  top: 10px;
+  transition: all 0.1s;
+  font-family: sans-serif;
+}
+.section-2 .inner .switchBox .off {
+  color: #636161;
+  bottom: 5px;
+  transition: all 0.1s;
+  transform: scaleY(0.85);
+}
+.section-2 .inner .switchBox .but {
+  background-color: #000;
+  border-radius: 400px 400px 400px 400px/400px 400px 300px 300px;
+  border-bottom-width: 0px;
+  box-shadow: inset 8px 6px 5px -7px rgb(0, 0, 0), inset -8px 6px 5px -7px rgb(0, 0, 0), inset 0 -3px 2px -2px rgba(200, 200, 200, 0.5), 0 3px 3px -2px rgb(0, 0, 0), inset 0 -230px 60px -200px rgba(255, 255, 255, 0.2), inset 0 220px 40px -200px rgba(0, 0, 0, 0.3);
+  display: block;
+  font-size: 17px;
+  height: 60px;
+  position: relative;
+  transition: all 0.2s;
+  width: 40px;
+}
+.section-2 .inner .switchBox .back {
+  background-color: #000;
+  background-image: -webkit-linear-gradient(0deg, transparent 30%, transparent 65%), -webkit-linear-gradient(0deg, rgba(245, 245, 245, 0) 30%, rgba(150, 150, 150, 0.1) 50%, rgba(150, 150, 150, 0) 70%);
+  border-radius: 115px;
+  box-sizing: border-box;
+  height: 85px;
+  padding: 4px 4px;
+  transition: all 0.2s;
+  width: 50px;
+}
+.section-2 .inner .switchBox input:checked + .back .on,
+.section-2 .inner .switchBox input:checked + .back .off {
+  text-shadow: inset 1px 1px 1px black;
+}
+.section-2 .inner .switchBox input:checked + .back .on {
+  color: rgb(141, 141, 141);
+  top: 10px;
+  transform: scaleY(0.85);
+}
+.section-2 .inner .switchBox input:checked + .back .off {
+  color: #fff;
+  bottom: 5px;
+  transform: scaleY(1);
+}
+.section-2 .inner .switchBox input:checked + .back .but {
+  background: #232323;
+  background-image: -webkit-radial-gradient(55% 18%, circle closest-corner, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  border-radius: 410px 410px 410px 410px/310px 310px 410px 410px;
+  box-shadow: inset 8px -4px 5px -7px rgb(0, 0, 0), inset -8px -4px 5px -7px rgb(0, 0, 0), 0 -3px 8px -4px rgba(250, 250, 250, 0.4), inset 0 3px 4px -2px rgb(10, 10, 10), inset 0 280px 40px -200px rgba(0, 0, 0, 0.2), inset 0 -200px 40px -200px rgba(180, 180, 180, 0.2);
+  margin-top: 20px;
+}
+.section-2 .inner .switchBox input:checked + .back {
+  background-image: -webkit-linear-gradient(90deg, black 30%, transparent 65%), -webkit-linear-gradient(180deg, rgba(250, 250, 250, 0) 0%, rgba(250, 250, 250, 0.4) 50%, rgba(150, 150, 150, 0) 100%);
+  box-shadow: 28px 28px 28px -28px rgba(0, 0, 0, 0.1), -28px 28px 28px -22px rgba(0, 0, 0, 0.1), 0 30px 30px 0px rgba(0, 0, 0, 0.2), inset 0 1px 2px 0 rgba(0, 0, 0, 0.6);
+  padding: 2px 4px;
+}
+.section-2 .inner .switchBox .l,
+.section-2 .inner .switchBox .r {
+  margin: 0 auto;
+  text-align: center;
+}
+.section-2 .inner .switchBox .round,
+.section-2 .inner .switchBox #onoff,
+.section-2 .inner .switchBox .back,
+.section-2 .inner .switchBox .but,
+.section-2 .inner .switchBox .on,
+.section-2 .inner .switchBox .off {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.section-2 .inner .switchBox .round {
+  position: absolute;
+  z-index: 1;
+  top: 3%;
+  left: 10%;
+}
+.section-2 .inner .contentsWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 1s;
+  opacity: 0;
+  background-color: #f7f795;
+  color: transparent;
+  font: bold 5rem/1.5 "Bangers";
+  -webkit-text-stroke: 2px black;
+  letter-spacing: 10px;
+}
+.section-2 .inner .contentsWrapper .contents {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  justify-content: space-around;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.section-2 .inner .contentsWrapper .contents .card {
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
 }
 
 body {
@@ -115,6 +254,7 @@ header #headerLogo {
   top: 100%;
 }
 .section-1 .container {
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -219,16 +359,6 @@ header #headerLogo {
   visibility: visible;
 }
 
-.section-2 {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  z-index: 3;
-  transition: 0.8s;
-  background-color: green;
-  top: 200%;
-}
-
 .section-3 {
   position: absolute;
   width: 100%;
@@ -237,14 +367,4 @@ header #headerLogo {
   transition: 0.8s;
   background-color: skyblue;
   top: 300%;
-}
-
-.section-4 {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  z-index: 3;
-  transition: 0.8s;
-  background-color: beige;
-  top: 400%;
 }/*# sourceMappingURL=event.css.map */
