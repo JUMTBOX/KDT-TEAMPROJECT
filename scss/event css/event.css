@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
 * {
@@ -148,36 +149,39 @@ a {
 .section-2 .inner .contentsWrapper .contents {
   letter-spacing: 2px;
   position: relative;
-  height: 100%;
+  height: 75vh;
   width: 100%;
   display: grid;
   justify-content: space-around;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  -webkit-text-stroke-color: black;
 }
 .section-2 .inner .contentsWrapper .contents .card {
   width: 1fr;
-  height: 100%;
-  border: 1px solid black;
-  background-color: #c6bebe;
+  height: 75vh;
+  background: linear-gradient(to bottom, #fbf13a 10%, transparent 80%);
   padding: 2rem;
-  border-radius: 6px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 .section-2 .inner .contentsWrapper .contents .card .cardWrapper {
   background-color: white;
   border-radius: 10px;
-  width: 95%;
-  height: 60%;
+  width: 100%;
+  height: 85%;
+  box-shadow: 0 5px 8px 0 black;
 }
 .section-2 .inner .contentsWrapper .contents .card .cardWrapper .card-image {
   width: 100%;
-  height: 30%;
+  height: 40%;
+  margin-top: 1.5rem;
+  padding: 1rem;
 }
 .section-2 .inner .contentsWrapper .contents .card .cardWrapper .card-image img {
   width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
 .section-2 .inner .contentsWrapper .contents .card .cardWrapper .card-image:hover {
@@ -185,10 +189,10 @@ a {
 }
 .section-2 .inner .contentsWrapper .contents .card .cardWrapper .category {
   text-transform: uppercase;
-  font-size: 0.5em;
+  font-size: 0.7em;
+  font-family: "Tourney";
   font-weight: 500;
-  color: #3f79e6;
-  padding: 5px 3px 0;
+  padding-top: 1.5rem;
 }
 .section-2 .inner .contentsWrapper .contents .card .cardWrapper .category:hover {
   cursor: pointer;
@@ -197,12 +201,6 @@ a {
   font-size: 1rem;
   color: #585757;
   padding: 7px;
-}
-.section-2 .inner .contentsWrapper .contents .card .cardWrapper .heading .author {
-  color: gray;
-  font-weight: 400;
-  font-size: 8px;
-  padding-top: 1rem;
 }
 
 body {
