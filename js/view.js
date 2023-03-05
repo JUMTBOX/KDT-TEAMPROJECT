@@ -42,7 +42,6 @@ section.addEventListener("wheel", (e) => {
   // 옆으로 치워도 해당 섹션이 있던 공간을 잡아먹기 때문에 디스플레이 논 처리
   setTimeout(() => {
     figureSection.style.display = "none";
-    // section.style.borderBottom = "1px solid #fff";
   }, 450);
 
   //휠값에 따라 슬라이드 섹션 페이지 넘버를 바꾸어줌
@@ -186,16 +185,93 @@ instaImg.addEventListener(
 
 // Slider3
 
-//로더 적용..
+//ImgDescript 재사용을 위한 고민
 const slider3 = section.querySelector("#slider3");
-const loader = section.querySelector(".loader");
-
 slider3.addEventListener(
-  "mouseover",
+  "click",
   () => {
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 1000);
+    const makeImgDescript = document.createElement("div");
+    makeImgDescript.classList.add("imgDescript");
+    makeImgDescript.innerHTML = `<span class="emogeContainer">
+            <i class="fa-solid fa-heart" style="color: #dd2a7b"></i>
+            <i class="fa-regular fa-comment"></i>
+            <i class="fa-regular fa-paper-plane"></i>
+          </span>
+          <div class="imgPlace">
+            <span class="profileHead">
+              #Seoul Sky
+              <span class="profileCircleLine">
+                <span class="profileCircle" 
+                style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMcZ29NyKyphm5BLll3Dd8MW5_GgAmwEJofQ&usqp=CAU)"></span>
+              </span>
+              <span class="profileFollow">
+                <b>8.4M</b>
+                <br />
+                POSTS
+                <br />
+                <button class="followBtn">follow</button>
+              </span>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.804473904309!2d127.10011631524364!3d37.512529479808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b458e7369b7bb%3A0x99685e4ee512b384!2z7ISc7Jq47Iqk7Lm07J20!5e0!3m2!1sko!2skr!4v1677821030918!5m2!1sko!2skr"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </span>
+          </div>`;
+    makeImgDescript.style.backgroundImage =
+      "url(/video/spot-image/서울스카이.jpg)";
+
+    slider3.appendChild(makeImgDescript);
+
+    makeImgDescript.addEventListener(
+      "click",
+      () => {
+        //세번째 ImgDescript 만들기
+        const makethirdImgDescript = document.createElement("div");
+        makethirdImgDescript.classList.add("imgDescript");
+
+        makethirdImgDescript.innerHTML = `<span class="emogeContainer">
+            <i class="fa-solid fa-heart" style="color: #dd2a7b"></i>
+            <i class="fa-regular fa-comment"></i>
+            <i class="fa-regular fa-paper-plane"></i>
+          </span>
+          <div class="imgPlace">
+            <span class="profileHead">
+              #DDP
+              <span class="profileCircleLine">
+                <span class="profileCircle" 
+                style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk7sxTIseipVjijcfd-r_7C_6ZjOst7WWn8A&usqp=CAU)"></span>
+              </span>
+              <span class="profileFollow">
+                <b>131M</b>
+                <br />
+                POSTS
+                <br />
+                <button class="followBtn">follow</button>
+              </span>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.513447061601!2d127.00703491524526!3d37.566525579797926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b456faf5814f3%3A0x5c22a91dab450bdc!2zRERQIOuPmeuMgOusuOuUlOyekOyduO2UjOudvOyekA!5e0!3m2!1sko!2skr!4v1677823406837!5m2!1sko!2skr"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </span>
+          </div>`;
+
+        makethirdImgDescript.style.backgroundImage =
+          "url(/video/spot-image/ddp야경.jpeg)";
+        slider3.appendChild(makethirdImgDescript);
+
+        //RICK ROLLED
+        makethirdImgDescript.addEventListener("click", () => {
+          open("https://www.youtube.com/watch?v=BBJa32lCaaY");
+        });
+      },
+      { once: true }
+    );
   },
   { once: true }
 );

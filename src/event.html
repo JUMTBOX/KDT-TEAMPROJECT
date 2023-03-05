@@ -1,86 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EVENT</title>
+    <!-- FONT AWESOME -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/7090071867.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../scss/event css/event.css" />
+    <!-- JS -->
+    <script defer src="../js/event.js"></script>
+    <script defer src="../js/commonButton.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EVENT</title>
-  <!-- FONT AWESOME -->
-  <script defer src="https://kit.fontawesome.com/7090071867.js" crossorigin="anonymous"></script>
-  <!-- CSS -->
-  <link rel="stylesheet" href="../scss/event css/event.css" />
-  <!-- JS -->
-  <script defer src="../js/event.js"></script>
-  <script defer src="../js/commonButton.js"></script>
-</head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <a href="/main.html" id="headerLogo"> NIGHT IN SEOUL.</a>
+      <ul>
+        <li><a href="/src/event.html">EVENT</a></li>
+        <li><a href="/src/palace.html">PALACE</a></li>
+        <li><a href="/src/drive.html">DRIVE</a></li>
+        <li><a href="/src/view.html">VIEW</a></li>
+      </ul>
+    </header>
 
-<body>
-  <!-- HEADER -->
-  <header>
-    <div class="inner">
-      <div class="logo">
-        <a href="/main.html">NIGHT IN SEOUL</a>
-      </div>
-      <div class="menu">
-        <ul class="menu__sub-menu">
-          <li><a href="#">EVENT</a></li>
-          <li><a href="#">PALACE</a></li>
-          <li><a href="#">VIEW</a></li>
-          <li><a href="#">DRIVE</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
+    <!-- SECTION-VIDEO -->
+    <figure class="video">
+      <video
+        src="../video/event-image/event-bg.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+    </figure>
 
-  <!-- SECTION-VIDEO -->
-  <figure class="video">
-    <video src="../video/event-bg.mp4" autoplay muted loop></video>
-  </figure>
-
-  <!-- SECTION-1 -->
-  <section class="section-1">
+    <!-- SECTION-1 -->
     <div class="container">
-      <div class="line-1">
-        <div class="element">
-          <div class="content">
-            <p class="title">서대문 문화재 야행</p>
-            <div class="text">
-              행사 장소 : 서대문 일대 / 독립공원<br />
-              이용요금 : 무료<br />
-              홈페이지 : <a href="http://www.sdmnightroad.com" target="_blank">www.sdmnightroad.com</a>
+      <section class="section-1">
+        <div class="container">
+          <div class="line">
+            <div class="line-1">
+              <div class="element" id="textElement">
+                <div class="content">
+                  <p class="title">SEODAEMOON</p>
+                  <div class="text">
+                    <b style="color: yellow">LOCATION</b> : NEAR SEODAEMOON /
+                    INDEPENDENCE PARK<br />
+                    <b style="color: yellow">COST</b> : FREE<br />
+                    <b style="color: yellow">LINK</b> :
+                    <a href="http://www.sdmnightroad.com" target="_blank"
+                      >www.sdmnightroad.com</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="element" id="sec-1-el-1">
+                <img src="../video/event-image/서대문_01.jpg" alt="" />
+              </div>
+              <div class="element" id="sec-1-el-2">
+                <img src="../video/event-image/서대문_02.jpg" alt="" />
+              </div>
+              <div class="element" id="sec-1-el-3">
+                <img src="../video/event-image/서대문_03.jpg" alt="" />
+              </div>
+            </div>
+            <div class="line-2">
+              <div class="element" id="sec-1-el-4">
+                <img src="../video/event-image/서대문_04.jpg" alt="" />
+              </div>
+              <div class="element" id="sec-1-el-5">
+                <img src="../video/event-image/서대문_05.jpg" alt="" />
+              </div>
+              <div class="element" id="sec-1-el-6">
+                <img src="../video/event-image/서대문_06.jpg" alt="" />
+              </div>
+              <div class="element" id="sec-1-el-7">
+                <img src="../video/event-image/서대문_07.jpg" alt="" />
+              </div>
+            </div>
+            <div class="detailPopup">
+              <!-- <img src="" alt="" /> -->
+              <i class="fa-regular fa-xmark closeBtn"></i>
             </div>
           </div>
         </div>
-        <div class="element"><img src="../video/event/서대문_01.jpg" alt="" /></div>
-        <div class="element"><img src="../video/event/서대문_02.jpg" alt="" /></div>
-        <div class="element"><img src="../video/event/서대문_03.jpg" alt="" /></div>
-      </div>
-      <div class="line-2">
-        <div class="element"></div>
-        <div class="element"></div>
-        <div class="element"></div>
-        <div class="element"></div>
-      </div>
+        <!-- 보류 -->
+        <!-- <div class="bottom-text">가을 밤 아래, 별을 따라 걷는 길. 서대문구의 문화재와 동주의 이야기를 듣는 서대문구 문화재야행</div> -->
+      </section>
+
+      <section class="section-2">
+        <div class="inner"></div>
+      </section>
+
+      <section class="section-3">
+        <div class="inner"></div>
+      </section>
+
+      <section class="section-4">
+        <div class="inner"></div>
+      </section>
     </div>
-  </section>
-
-  <section class="section-2">
-    <div class="inner"></div>
-  </section>
-
-  <section class="section-3">
-    <div class="inner"></div>
-  </section>
-
-  <section class="section-4">
-    <div class="inner"></div>
-  </section>
-
-  <!-- BUTTON -->
-  <button id="commonUpButton">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
-</body>
-
+    <!-- BUTTON -->
+    <button id="commonUpButton">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </body>
 </html>

@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,10 @@ body {
   background-color: #0c0b0d;
   color: #fff;
   position: relative;
+}
+
+.inner {
+  width: 1300px;
 }
 
 ul,
@@ -39,7 +44,7 @@ header {
   display: flex;
   padding: 0 7.5vw;
   align-items: center;
-  font: bold 3rem/1 "Tilt Prism";
+  font: bold 3rem/1 "Banger";
 }
 header a:hover {
   background: linear-gradient(to top, #fbf13a 10%, transparent 50%);
@@ -92,11 +97,6 @@ figure .text:hover p {
   -webkit-text-stroke: 2px rgb(234, 181, 232);
 }
 
-section {
-  width: 100%;
-  height: 1000px;
-}
-
 .mq1,
 .mq2 {
   width: 100%;
@@ -116,24 +116,30 @@ section {
 }
 
 .palace-kb {
+  background-image: url("../../video/palace/bg-4.jpg");
+  background-position: contain;
+}
+.palace-kb .inner {
   position: relative;
-  height: 700px;
-  margin-bottom: 150px;
-  padding-top: 30px;
-  background-color: #030101;
+  height: 600px;
+  margin-bottom: 100px;
+  margin-top: 30px;
   font-family: "양진체";
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  margin-left: 100px;
 }
 .palace-kb .container {
   display: flex;
   justify-content: center;
-  width: 1400px;
-  border: solid 10px rgb(23, 38, 204);
+  width: 1200px;
+  border: solid 5px rgb(144, 152, 236);
   align-items: center;
-  top: 10%;
-  margin-left: 90px;
+  top: 20%;
+  margin-left: 85px;
+  margin-top: 30px;
+  overflow: hidden;
   transform: skew(5deg);
 }
 .palace-kb .container .card {
@@ -185,31 +191,37 @@ section {
 }
 
 .palace-ds {
+  height: 600px;
+  background-image: url("../../video/palace/bg2.jpg");
+  background-position: contain;
+}
+.palace-ds .inner {
   position: relative;
-  width: 1200px;
-  height: 100vh;
-  top: 0%;
-  margin-bottom: 200px;
-  left: 50px;
+  width: 1300px;
+  height: 600px;
+  left: 80px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 .palace-ds .slider-container {
   position: absolute;
   overflow: hidden;
-  width: 100%;
-  height: 100vh;
+  width: 1100px;
+  height: 70vh;
+  margin-top: 40px;
+  left: 10px;
+  border: solid 5px #84ff9b;
 }
 .palace-ds .slider-container .left-slide {
-  height: 100%;
+  height: 70vh;
   width: 35%;
   position: absolute;
   top: 0;
   left: 0;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.7s ease-in-out;
 }
-.palace-ds .slider-container .left-slide .item1,
-.palace-ds .slider-container .left-slide .item2,
-.palace-ds .slider-container .left-slide .item3,
-.palace-ds .slider-container .left-slide .item4 {
+.palace-ds .slider-container .left-slide div {
   height: 100%;
   width: 100%;
   display: flex;
@@ -218,96 +230,95 @@ section {
   justify-content: center;
   color: #fff;
 }
-.palace-ds .slider-container .left-slide .item1 {
-  background-color: #FD3555;
-}
-.palace-ds .slider-container .left-slide .item2 {
-  background-color: #2A86BA;
-}
-.palace-ds .slider-container .left-slide .item3 {
-  background-color: #252E33;
-}
-.palace-ds .slider-container .left-slide .item4 {
-  background-color: #FFB866;
-}
-.palace-ds .slider-container .left-slide h1 {
+.palace-ds .slider-container .left-slide div h1 {
   font-size: 40px;
-  font-family: "양진체";
   margin-bottom: 10px;
   margin-top: -30px;
+  color: rgb(100, 255, 118);
+  text-shadow: -2px 0 #400bee, 0 2px #400bee, 2px 0 #400bee, 0 -2px #400bee;
 }
 .palace-ds .slider-container .right-slide {
   height: 100%;
   position: absolute;
-  top: 0%;
+  top: 0;
   left: 35%;
-  width: 100%;
-  transition: transform 0.5s ease-in-out;
+  width: 65%;
+  transition: transform 0.7s ease-in-out;
 }
-.palace-ds .slider-container .right-slide .item1,
-.palace-ds .slider-container .right-slide .item2,
-.palace-ds .slider-container .right-slide .item3,
-.palace-ds .slider-container .right-slide .item4 {
+.palace-ds .slider-container .right-slide div {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   height: 100%;
   width: 100%;
 }
-.palace-ds .slider-container .right-slide .item1 {
-  background-image: url("../../video/palace/ds-junggwan.jpg");
-}
-.palace-ds .slider-container .right-slide .item2 {
-  background-image: url("../../video/palace/ds-kyungwoonham.jpg");
-}
-.palace-ds .slider-container .right-slide .item3 {
-  background-image: url("../../video/palace/ds-seokjo.jpg");
-}
-.palace-ds .slider-container .right-slide .item4 {
-  background-image: url("../../video/palace/ds-seokuh.jpg");
-}
-.palace-ds .slider-container button {
+.palace-ds .slider-container .action-buttons {
   background-color: #fff;
   border: none;
   color: #aaa;
   cursor: pointer;
   font-size: 16px;
-  padding: 15px;
 }
-.palace-ds .slider-container button:hover {
+.palace-ds .slider-container .action-buttons:hover {
   color: #222;
 }
-.palace-ds .slider-container button:focus {
-  outline: none;
+.palace-ds .slider-container .action-buttons:hover {
+  color: #222;
 }
-.palace-ds .slider-container .action-buttons {
+.palace-ds .slider-container .down-button,
+.palace-ds .slider-container .up-button {
+  padding: 15px;
   position: absolute;
-  left: 33%;
+  left: 35%;
   top: 50%;
   z-index: 100;
 }
-.palace-ds .slider-container .action-buttons .down-button {
+.palace-ds .slider-container:hover {
+  color: #222;
+}
+.palace-ds .slider-container:focus {
+  outline: none;
+}
+.palace-ds .slider-container .down-button {
   transform: translateX(-100%);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.palace-ds .slider-container .action-buttons .up-button {
+.palace-ds .slider-container .up-button {
   transform: translateY(-100%);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-.container {
-  position: absolute;
-  top: 80%;
-  width: 100%;
-  height: 70%;
+.palace-cdk {
+  background-image: url("../../video/palace/bg5.jpg");
+  background-position: contain;
+  height: 700px;
 }
-.container .mySlides {
+.palace-cdk .inner {
+  position: relative;
+  height: 680px;
+  margin-top: 100px;
+  margin-left: 100px;
+  overflow: hidden;
+}
+.palace-cdk .inner .container {
+  position: relative;
+  width: 1000px;
+  height: 700px;
+  margin-top: 20px;
+  left: 200px;
+  border: dashed 5px #e4e081;
+  overflow: hidden;
+  /* Container for image text */
+}
+.palace-cdk .inner .container .mySlides {
   display: none;
+  padding-bottom: 6px;
+  height: 100% px;
 }
-.container .prev,
-.container .next {
+.palace-cdk .inner .container .prev,
+.palace-cdk .inner .container .next {
   cursor: pointer;
   position: absolute;
   top: 40%;
@@ -322,34 +333,40 @@ section {
        user-select: none;
   -webkit-user-select: none;
 }
-.container .next {
+.palace-cdk .inner .container .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-.container .prev:hover,
-.container .next:hover {
+.palace-cdk .inner .container .prev:hover,
+.palace-cdk .inner .container .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.container .caption-container {
+.palace-cdk .inner .container .caption-container {
+  position: relative;
   text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
+  background-color: #b76bb2;
+  padding: 4px 16px;
+  font-family: "양진체";
   color: white;
 }
-.container .row:after {
+.palace-cdk .inner .container .row {
+  position: relative;
+  height: 100px;
+}
+.palace-cdk .inner .container .row:after {
   content: "";
   display: table;
   clear: both;
 }
-.container .column {
+.palace-cdk .inner .container .column {
   float: left;
   width: 16.66%;
 }
-.container .demo-cursor {
-  opacity: 0.6;
+.palace-cdk .inner .container .demo-cursor {
+  opacity: 0.4;
 }
-.container .active,
-.container .demo:hover {
+.palace-cdk .inner .container .active,
+.palace-cdk .inner .container .demo-cursor:hover {
   opacity: 1;
 }
 
