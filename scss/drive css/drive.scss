@@ -417,6 +417,7 @@ figure {
     &::after {
       content: "";
       background-image: url(/video/banpojpg.jpg);
+      background-position: center;
     }
   }
 
@@ -428,6 +429,7 @@ figure {
     &::after {
       content: "";
       background-image: url(/video/namsan.png);
+      background-position: center;
       background-size: cover;
     }
   }
@@ -440,6 +442,7 @@ figure {
     &::after {
       content: "";
       background-image: url(/video/buk.jpg);
+      background-position: center;
       background-size: cover;
     }
   }
@@ -452,6 +455,7 @@ figure {
     &::after {
       content: "";
       background-image: url(/video/drive4.png);
+      background-position: center;
       background-size: cover;
     }
   }
@@ -464,6 +468,7 @@ figure {
     &::after {
       content: "";
       background-image: url(/video/drive5.png);
+      background-position: center;
       background-size: cover;
     }
   }
@@ -475,6 +480,7 @@ figure {
     &::after {
       content: "";
       background-image: url(/video/drive6.png);
+      background-position: center;
       background-size: cover;
     }
   }
