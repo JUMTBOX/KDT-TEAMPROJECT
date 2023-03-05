@@ -18,11 +18,9 @@ a {
 
 @font-face {
   font-family: "bitbit";
-  src: url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff"),
-    url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2");
+  src: url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff"), url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2");
   font-family: "Cafe24Ssurround";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -66,6 +64,10 @@ header {
 header h1 a {
   font: bold 5.5rem/50px "Bangers";
   color: #fff;
+  text-shadow: -2px 0 #400bee, 0 2px #400bee, 2px 0 #400bee, 0 -2px #400bee;
+}
+header h1 a:hover {
+  background: linear-gradient(to top, #fbf13a 10%, transparent 50%);
 }
 header .gnb {
   display: flex;
@@ -81,7 +83,7 @@ header .gnb li a {
 }
 header .gnb li a:hover {
   font-weight: bold;
-  color: black;
+  background: linear-gradient(to top, #fbf13a 10%, transparent 50%);
 }
 
 figure {
@@ -96,7 +98,7 @@ figure video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 @keyframes slideLeftOutRightIn {
@@ -214,13 +216,6 @@ figure video {
   padding: 5px;
   margin-top: 5px;
 }
-#two .go {
-  position: absolute;
-  right: 24vw;
-  bottom: 5vh;
-  font: 2.4rem arial;
-  color: #fbf13a;
-}
 
 .detail {
   position: relative;
@@ -267,12 +262,12 @@ figure video {
   z-index: 9999;
   color: #fff;
 }
-.seoul img {
+.seoul .map {
   position: absolute;
-  width: 50vw;
+  width: 75vw;
   top: 5%;
   left: 50%;
-  transform: translateX(-400px);
+  transform: translate(-600px, -300px);
 }
 .seoul .container {
   position: absolute;
@@ -285,9 +280,11 @@ figure video {
   background-color: #9b59b6;
   background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
 }
-.seoul .container:hover {
-  width: 500px;
+.seoul .container:active {
+  width: 200px;
   height: 200px;
+  z-index: 5;
+  animation: rotate_stop 1s;
 }
 .seoul .container span {
   position: absolute;
@@ -328,6 +325,14 @@ figure video {
     transform: rotate(360deg);
   }
 }
+@keyframes rotate_stop {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
 .seoul .container1 {
   top: 65%;
   left: 53%;
@@ -349,10 +354,10 @@ figure video {
   left: 54%;
 }
 .seoul .container5 {
-  top: 56%;
-  left: 41%;
+  top: 50%;
+  left: 35%;
 }
 .seoul .container6 {
   top: 61%;
   left: 58%;
-} /*# sourceMappingURL=drive.css.map */
+}/*# sourceMappingURL=drive.css.map */
