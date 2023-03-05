@@ -3,6 +3,7 @@ let page = 0; // 페이지 정보 초기화
 const header = document.querySelector("header");
 const container = document.querySelector(".container");
 window.addEventListener("wheel", (e) => {
+  console.log(e.deltaY);
   const direction = e.deltaY > 0 ? "down" : "up";
   if (direction === "up") {
     container
@@ -17,7 +18,7 @@ window.addEventListener("wheel", (e) => {
         .querySelector(`.section-${page + 1}`)
         .setAttribute("style", "top:0");
       header.style.display = "none";
-      page < 3 ? page++ : null;
+      page < 2 ? page++ : null;
       console.log(page);
     }
   }
@@ -79,3 +80,19 @@ document.addEventListener("click", function (e) {
 // }, 10); // 0.01 초 마다 왼쪽으로 이동
 
 // -----------------------------------------------------------------------------------
+const section2 = document.querySelector(".section-2");
+const sec2Contents = section2.querySelector(".contentsWrapper");
+const onoffBtn = document.querySelector("#onoff");
+
+let isBtnClicked = 0;
+onoffBtn.addEventListener("click", () => {
+  isBtnClicked == 0
+    ? (sec2Contents.style.opacity = "1")((isBtnClicked = 1))
+    : (sec2Contents.style.opacity = "0")((isBtnClicked = 0));
+});
+
+for (let i = 1; i < 5; i += 1) {
+  const contentsCard = document.createElement("div");
+  contentsCard.classList.add(".card");
+  contentsCard.setAttribute("id", `card${i}`);
+}
