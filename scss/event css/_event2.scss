@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 // "Bangers"
 
+@import url("https://fonts.googleapis.com/css2?family=Gajraj+One&family=Tilt+Prism&family=Tourney:wght@200&display=swap");
+// font-family: 'Gajraj One', cursive;
+// font-family: 'Tilt Prism', cursive;
+// font-family: 'Tourney', cursive;
+
 .section-2 {
   position: absolute;
   width: 100%;
@@ -170,24 +175,67 @@
       text-align: center;
       transition: 1s;
       opacity: 0;
-      background-color: #f7f795;
+      background-color: #181818;
       color: transparent;
       font: bold 5rem/1.5 "Bangers";
-      -webkit-text-stroke: 2px black;
-      letter-spacing: 10px;
+      -webkit-text-stroke: 1px yellow;
+      letter-spacing: 15px;
       .contents {
+        letter-spacing: 2px;
         position: relative;
-        height: 100%;
+        height: 75vh;
         width: 100%;
         display: grid;
         justify-content: space-around;
         align-items: center;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-
+        -webkit-text-stroke-color: black;
         .card {
-          border: 1px solid black;
-          height: 100%;
-          width: 100%;
+          width: 1fr;
+          height: 75vh;
+          background: linear-gradient(to bottom, #fbf13a 10%, transparent 80%);
+          padding: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .cardWrapper {
+            background-color: white;
+            border-radius: 10px;
+            width: 100%;
+            height: 85%;
+            box-shadow: 0 5px 8px 0 black;
+            .card-image {
+              width: 100%;
+              height: 40%;
+              margin-top: 1.5rem;
+              padding: 1rem;
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+              }
+              &:hover {
+                transform: scale(0.99);
+              }
+            }
+            .category {
+              text-transform: uppercase;
+              font-size: 0.7em;
+              font-family: "Tourney";
+              font-weight: 500;
+              padding-top: 1.5rem;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+
+            .heading {
+              font-size: 1rem;
+              color: #585757;
+              padding: 7px;
+            }
+          }
         }
       }
     }

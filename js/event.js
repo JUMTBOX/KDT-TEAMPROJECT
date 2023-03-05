@@ -18,7 +18,7 @@ window.addEventListener("wheel", (e) => {
         .querySelector(`.section-${page + 1}`)
         .setAttribute("style", "top:0");
       header.style.display = "none";
-      page < 2 ? page++ : null;
+      page < 1 ? page++ : null;
       console.log(page);
     }
   }
@@ -82,6 +82,7 @@ document.addEventListener("click", function (e) {
 // -----------------------------------------------------------------------------------
 const section2 = document.querySelector(".section-2");
 const sec2Contents = section2.querySelector(".contentsWrapper");
+const realContents = section2.querySelector(".contents");
 const onoffBtn = document.querySelector("#onoff");
 
 let isBtnClicked = 0;
@@ -91,8 +92,56 @@ onoffBtn.addEventListener("click", () => {
     : (sec2Contents.style.opacity = "0")((isBtnClicked = 0));
 });
 
-for (let i = 1; i < 5; i += 1) {
+for (let i = 2; i < 5; i += 1) {
   const contentsCard = document.createElement("div");
-  contentsCard.classList.add(".card");
+  contentsCard.classList.add("card");
   contentsCard.setAttribute("id", `card${i}`);
+  realContents.appendChild(contentsCard);
 }
+
+const card2 = sec2Contents.querySelector("#card2");
+const card3 = sec2Contents.querySelector("#card3");
+const card4 = sec2Contents.querySelector("#card4");
+
+card2.innerHTML = `
+<div class="cardWrapper">
+                    <div class="card-image">
+                      <img
+                        style = "width: 100%"
+                        src="/video/event-image/반포 야시장.jpg"
+                        alt="반포"
+                      />
+                    </div>
+                    <div class="category">Banpo</div>
+                    <div class="heading">Banpo Night-goblin Market</div>
+                  </div>
+`;
+
+card3.innerHTML = `
+<div class="cardWrapper">
+                    <div class="card-image">
+                      <img
+                        src="/video/event-image/DDP 야시장.jpg"
+                        alt="DDP"
+                      />
+                    </div>
+                    <div class="category">DDP</div>
+                    <div class="heading">DDP Night-goblin Market</div>
+                  </div>
+`;
+
+card4.innerHTML = `
+<div class="cardWrapper">
+                    <div class="card-image">
+                      <img
+                        src="/video/event-image/청계천 야시장.jpg"
+                        alt="DDP"
+                      />
+                    </div>
+                    <div class="category" style="font-size: 0.5em;
+                    ">
+Cheonggye</div>
+                    <div class="heading" style="padding-top:20px">
+Cheonggyecheon Night-goblin Market</div>
+                  </div>
+`;
