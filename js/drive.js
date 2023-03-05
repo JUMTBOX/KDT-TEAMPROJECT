@@ -387,15 +387,3 @@ btn6.addEventListener("click", () => {
   ex5.style.opacity = "0";
   ex6.style.opacity = "1";
 });
-
-// animation stop //
-
-//animate with stop()
-$(".stop").hover(
-  function () {
-    $(this).stop().animate({ width: "200px" }, 500);
-  },
-  function () {
-    $(this).stop().animate({ width: "50px" }, 500);
-  }
-);

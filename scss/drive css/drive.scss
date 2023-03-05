@@ -309,7 +309,7 @@ figure {
 .st0 {
   fill: none;
   stroke: #fbf13a;
-  stroke-width: 3;
+  stroke-width: 5;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
@@ -326,9 +326,9 @@ figure {
   .map {
     position: absolute;
     width: 75vw;
-    top: 5%;
+    top: 15%;
     left: 50%;
-    transform: translate(-600px, -300px);
+    transform: translate(-600px, -200px);
   }
 
   // 표시 //
@@ -344,10 +344,11 @@ figure {
     background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
 
     &:active {
-      width: 200px;
-      height: 200px;
+      width: 350px;
+      height: 350px;
+      transform: translate(-125px, -125px);
       z-index: 5;
-      animation: rotate_stop 1s;
+      animation: rotate_stop;
     }
   }
 
@@ -410,8 +411,8 @@ figure {
 
   // 반포대교 //
   .container1 {
-    top: 65%;
-    left: 53%;
+    top: 76%;
+    left: 50%;
 
     &::after {
       content: "";
@@ -421,29 +422,60 @@ figure {
 
   // 남산 //
   .container2 {
-    top: 37%;
+    top: 65%;
     left: 49%;
+
+    &::after {
+      content: "";
+      background-image: url(/video/namsan.png);
+      background-size: cover;
+    }
   }
 
   // 북악 스퀘어 //
   .container3 {
     top: 53%;
-    left: 50%;
+    left: 48%;
+
+    &::after {
+      content: "";
+      background-image: url(/video/buk.jpg);
+      background-size: cover;
+    }
   }
 
+  // 응봉산 //
   .container4 {
-    top: 51%;
-    left: 54%;
+    top: 70%;
+    left: 57%;
+
+    &::after {
+      content: "";
+      background-image: url(/video/drive4.png);
+      background-size: cover;
+    }
   }
 
   // 여의도 //
   .container5 {
-    top: 50%;
-    left: 35%;
+    top: 70%;
+    left: 40%;
+
+    &::after {
+      content: "";
+      background-image: url(/video/drive5.png);
+      background-size: cover;
+    }
   }
   // 동호대교 //
   .container6 {
-    top: 61%;
-    left: 58%;
+    top: 71%;
+    left: 53%;
+
+    &::after {
+      content: "";
+      background-image: url(/video/drive6.png);
+      background-size: cover;
+    }
   }
 }
