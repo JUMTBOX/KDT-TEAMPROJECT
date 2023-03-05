@@ -264,6 +264,11 @@ slider3.addEventListener(
         makethirdImgDescript.style.backgroundImage =
           "url(/video/spot-image/ddp야경.jpeg)";
         slider3.appendChild(makethirdImgDescript);
+
+        //RICK ROLLED
+        makethirdImgDescript.addEventListener("click", () => {
+          open("https://www.youtube.com/watch?v=BBJa32lCaaY");
+        });
       },
       { once: true }
     );
