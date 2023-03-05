@@ -18,7 +18,7 @@ window.addEventListener("wheel", (e) => {
         .querySelector(`.section-${page + 1}`)
         .setAttribute("style", "top:0");
       header.style.display = "none";
-      page < 2 ? page++ : null;
+      page < 1 ? page++ : null;
       console.log(page);
     }
   }

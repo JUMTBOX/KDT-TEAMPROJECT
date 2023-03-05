@@ -71,6 +71,10 @@ header {
   h1 a {
     font: bold 5.5rem/50px "Bangers";
     color: #fff;
+    text-shadow: -2px 0 #400bee, 0 2px #400bee, 2px 0 #400bee, 0 -2px #400bee;
+    &:hover {
+      background: linear-gradient(to top, #fbf13a 10%, transparent 50%);
+    }
   }
 
   .gnb {
@@ -88,7 +92,7 @@ header {
 
         &:hover {
           font-weight: bold;
-          color: black;
+          background: linear-gradient(to top, #fbf13a 10%, transparent 50%);
         }
       }
     }
@@ -232,13 +236,6 @@ figure {
       }
     }
   }
-  .go {
-    position: absolute;
-    right: 24vw;
-    bottom: 5vh;
-    font: 2.4rem arial;
-    color: #fbf13a;
-  }
 }
 
 .detail {
@@ -326,12 +323,12 @@ figure {
   z-index: 9999;
   color: #fff;
 
-  img {
+  .map {
     position: absolute;
-    width: 50vw;
+    width: 75vw;
     top: 5%;
     left: 50%;
-    transform: translateX(-400px);
+    transform: translate(-600px, -300px);
   }
 
   // 표시 //
@@ -346,9 +343,11 @@ figure {
     background-color: #9b59b6;
     background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
 
-    &:hover {
-      width: 500px;
+    &:active {
+      width: 200px;
       height: 200px;
+      z-index: 5;
+      animation: rotate_stop 1s;
     }
   }
 
@@ -399,6 +398,16 @@ figure {
     }
   }
 
+  @keyframes rotate_stop {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
   // 반포대교 //
   .container1 {
     top: 65%;
@@ -429,8 +438,8 @@ figure {
 
   // 여의도 //
   .container5 {
-    top: 56%;
-    left: 41%;
+    top: 50%;
+    left: 35%;
   }
   // 동호대교 //
   .container6 {
